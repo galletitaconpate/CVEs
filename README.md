@@ -42,3 +42,6 @@ Este repositorio contiene documentación y detalles sobre vulnerabilidades (CVEs
 
 ### 🛠️ ZoneMinder
 - [SQLi - CVE-2024-51482](./ZoneMinder/SQLi%20-%20CVE-2024-51482)
+
+### 🛠️ motionEye
+- [RCE - CVE-2025-60787](./motionEye/RCE%20-%20CVE-2025-60787)
