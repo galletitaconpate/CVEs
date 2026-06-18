@@ -51,3 +51,6 @@ Este repositorio contiene documentación y detalles sobre vulnerabilidades (CVEs
 
 ### 🛠️ CPython
 - [PathTraversal - CVE-2025-4517](./CPython/PathTraversal%20-%20CVE-2025-4517)
+
+### 🛠️ PrivateBin
+- [LFI - CVE-2025-64714](./PrivateBin/LFI%20-%20CVE-2025-64714)
