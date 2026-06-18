@@ -39,3 +39,6 @@ Este repositorio contiene documentación y detalles sobre vulnerabilidades (CVEs
 
 ### 🛠️ TensorFlow
 - [RCE - CVE-2024-3660](./TensorFlow/RCE%20-%20CVE-2024-3660)
+
+### 🛠️ ZoneMinder
+- [SQLi - CVE-2024-51482](./ZoneMinder/SQLi%20-%20CVE-2024-51482)
