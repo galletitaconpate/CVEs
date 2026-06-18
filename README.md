@@ -45,3 +45,6 @@ Este repositorio contiene documentación y detalles sobre vulnerabilidades (CVEs
 
 ### 🛠️ motionEye
 - [RCE - CVE-2025-60787](./motionEye/RCE%20-%20CVE-2025-60787)
+
+### 🛠️ Wing FTP Server
+- [RCE - CVE-2025-47812](./Wing%20FTP%20Server/RCE%20-%20CVE-2025-47812)
