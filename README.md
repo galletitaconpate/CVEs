@@ -36,3 +36,6 @@ Este repositorio contiene documentación y detalles sobre vulnerabilidades (CVEs
 
 ### 🛠️ PDF.js
 - [RCE - CVE-2024-4367](./PDF.js/RCE%20-%20CVE-2024-4367)
+
+### 🛠️ TensorFlow
+- [RCE - CVE-2024-3660](./TensorFlow/RCE%20-%20CVE-2024-3660)
