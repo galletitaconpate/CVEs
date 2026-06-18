@@ -30,3 +30,9 @@ Este repositorio contiene documentación y detalles sobre vulnerabilidades (CVEs
 
 ### 🛠️ MCPJam Inspector
 - [RCE - CVE-2026-23744](./MCPJam%20Inspector/RCE%20-%20CVE-2026-23744)
+
+### 🛠️ Next.js
+- [RCE - CVE-2025-55182](./Next.js/RCE%20-%20CVE-2025-55182)
+
+### 🛠️ PDF.js
+- [RCE - CVE-2024-4367](./PDF.js/RCE%20-%20CVE-2024-4367)
