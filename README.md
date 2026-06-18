@@ -48,3 +48,6 @@ Este repositorio contiene documentación y detalles sobre vulnerabilidades (CVEs
 
 ### 🛠️ Wing FTP Server
 - [RCE - CVE-2025-47812](./Wing%20FTP%20Server/RCE%20-%20CVE-2025-47812)
+
+### 🛠️ CPython
+- [PathTraversal - CVE-2025-4517](./CPython/PathTraversal%20-%20CVE-2025-4517)
