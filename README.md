@@ -56,19 +56,19 @@ Este repositorio contiene documentación y detalles sobre vulnerabilidades (CVEs
 - [LFI - CVE-2025-64714](./PrivateBin/LFI%20-%20CVE-2025-64714)
 
 ### 🛠️ Druva inSync
-- [LPE - CVE-2020-5752](./Druva inSync/LPE - CVE-2020-5752)
-
-### 🛠️ polkit
-- [LPE - CVE-2021-4034](./polkit/LPE - CVE-2021-4034)
-
-### 🛠️ Webmin
-- [RCE - CVE-2019-15107](./Webmin/RCE - CVE-2019-15107)
-
-### 🛠️ sudo
-- [AuthBypass - CVE-2019-14287](./sudo/AuthBypass - CVE-2019-14287)
-
-### 🛠️ Microsoft Windows SMBv1
-- [RCE - CVE-2017-0144](./Microsoft Windows SMBv1/RCE - CVE-2017-0144)
+- [LPE - CVE-2020-5752](./Druva%20inSync/LPE%20-%20CVE-2020-5752)
 
 ### 🛠️ Linux Kernel
-- [LPE - CVE-2021-3493](./Linux Kernel/LPE - CVE-2021-3493)
+- [LPE - CVE-2021-3493](./Linux%20Kernel/LPE%20-%20CVE-2021-3493)
+
+### 🛠️ Microsoft Windows SMBv1
+- [RCE - CVE-2017-0144](./Microsoft%20Windows%20SMBv1/RCE%20-%20CVE-2017-0144)
+
+### 🛠️ polkit
+- [LPE - CVE-2021-4034](./polkit/LPE%20-%20CVE-2021-4034)
+
+### 🛠️ sudo
+- [AuthBypass - CVE-2019-14287](./sudo/AuthBypass%20-%20CVE-2019-14287)
+
+### 🛠️ Webmin
+- [RCE - CVE-2019-15107](./Webmin/RCE%20-%20CVE-2019-15107)
