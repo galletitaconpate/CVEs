@@ -63,3 +63,6 @@ Este repositorio contiene documentación y detalles sobre vulnerabilidades (CVEs
 
 ### 🛠️ Webmin
 - [RCE - CVE-2019-15107](./Webmin/RCE - CVE-2019-15107)
+
+### 🛠️ sudo
+- [AuthBypass - CVE-2019-14287](./sudo/AuthBypass - CVE-2019-14287)
