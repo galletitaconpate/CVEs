@@ -54,3 +54,6 @@ Este repositorio contiene documentación y detalles sobre vulnerabilidades (CVEs
 
 ### 🛠️ PrivateBin
 - [LFI - CVE-2025-64714](./PrivateBin/LFI%20-%20CVE-2025-64714)
+
+### 🛠️ Druva inSync
+- [LPE - CVE-2020-5752](./Druva inSync/LPE - CVE-2020-5752)
