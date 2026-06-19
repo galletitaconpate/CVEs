@@ -69,3 +69,6 @@ Este repositorio contiene documentación y detalles sobre vulnerabilidades (CVEs
 
 ### 🛠️ Microsoft Windows SMBv1
 - [RCE - CVE-2017-0144](./Microsoft Windows SMBv1/RCE - CVE-2017-0144)
+
+### 🛠️ Linux Kernel
+- [LPE - CVE-2021-3493](./Linux Kernel/LPE - CVE-2021-3493)
