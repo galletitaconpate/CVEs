@@ -66,3 +66,6 @@ Este repositorio contiene documentación y detalles sobre vulnerabilidades (CVEs
 
 ### 🛠️ sudo
 - [AuthBypass - CVE-2019-14287](./sudo/AuthBypass - CVE-2019-14287)
+
+### 🛠️ Microsoft Windows SMBv1
+- [RCE - CVE-2017-0144](./Microsoft Windows SMBv1/RCE - CVE-2017-0144)
