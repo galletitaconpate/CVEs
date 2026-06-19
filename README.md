@@ -60,3 +60,6 @@ Este repositorio contiene documentación y detalles sobre vulnerabilidades (CVEs
 
 ### 🛠️ polkit
 - [LPE - CVE-2021-4034](./polkit/LPE - CVE-2021-4034)
+
+### 🛠️ Webmin
+- [RCE - CVE-2019-15107](./Webmin/RCE - CVE-2019-15107)
