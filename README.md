@@ -57,3 +57,6 @@ Este repositorio contiene documentación y detalles sobre vulnerabilidades (CVEs
 
 ### 🛠️ Druva inSync
 - [LPE - CVE-2020-5752](./Druva inSync/LPE - CVE-2020-5752)
+
+### 🛠️ polkit
+- [LPE - CVE-2021-4034](./polkit/LPE - CVE-2021-4034)
