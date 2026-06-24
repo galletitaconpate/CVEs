@@ -59,6 +59,7 @@ Este repositorio contiene documentación y detalles sobre vulnerabilidades (CVEs
 - [LPE - CVE-2020-5752](./Druva%20inSync/LPE%20-%20CVE-2020-5752)
 
 ### 🛠️ Linux Kernel
+- [LPE - CVE-2023-0386](./Linux%20Kernel/LPE%20-%20CVE-2023-0386)
 - [LPE - CVE-2021-3493](./Linux%20Kernel/LPE%20-%20CVE-2021-3493)
 
 ### 🛠️ Microsoft Windows SMBv1
