@@ -73,3 +73,6 @@ Este repositorio contiene documentación y detalles sobre vulnerabilidades (CVEs
 
 ### 🛠️ Webmin
 - [RCE - CVE-2019-15107](./Webmin/RCE%20-%20CVE-2019-15107)
+
+### 🛠️ Langflow
+- [RCE - CVE-2026-33017](./Langflow/RCE%20-%20CVE-2026-33017)
