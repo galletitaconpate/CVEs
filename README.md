@@ -76,3 +76,6 @@ Este repositorio contiene documentación y detalles sobre vulnerabilidades (CVEs
 
 ### 🛠️ Langflow
 - [RCE - CVE-2026-33017](./Langflow/RCE%20-%20CVE-2026-33017)
+
+### 🛠️ OpenSTAManager
+- [RCE - CVE-2025-69212](./OpenSTAManager/RCE%20-%20CVE-2025-69212)
