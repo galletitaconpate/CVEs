@@ -83,3 +83,6 @@ Este repositorio contiene documentación y detalles sobre vulnerabilidades (CVEs
 
 ### 🛠️ JetBrains TeamCity
 - [AuthBypass - CVE-2023-42793](./JetBrains%20TeamCity/AuthBypass%20-%20CVE-2023-42793)
+
+### 🛠️ WordPress Canto Plugin
+- [RFI - CVE-2023-3452](./WordPress%20Canto%20Plugin/RFI%20-%20CVE-2023-3452)
