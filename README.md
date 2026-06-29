@@ -79,3 +79,6 @@ Este repositorio contiene documentación y detalles sobre vulnerabilidades (CVEs
 
 ### 🛠️ OpenSTAManager
 - [RCE - CVE-2025-69212](./OpenSTAManager/RCE%20-%20CVE-2025-69212)
+
+### 🛠️ JetBrains TeamCity
+- [AuthBypass - CVE-2023-42793](./JetBrains%20TeamCity/AuthBypass%20-%20CVE-2023-42793)
