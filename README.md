@@ -89,3 +89,6 @@ Este repositorio contiene documentación y detalles sobre vulnerabilidades (CVEs
 
 ### 🛠️ Camaleon CMS
 - [AuthBypass - CVE-2025-2304](./Camaleon%20CMS/AuthBypass%20-%20CVE-2025-2304)
+
+### 🛠️ Grafana
+- [PathTraversal - CVE-2021-43798](./Grafana/PathTraversal%20-%20CVE-2021-43798)
