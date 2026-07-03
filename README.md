@@ -86,3 +86,6 @@ Este repositorio contiene documentación y detalles sobre vulnerabilidades (CVEs
 
 ### 🛠️ WordPress Canto Plugin
 - [RFI - CVE-2023-3452](./WordPress%20Canto%20Plugin/RFI%20-%20CVE-2023-3452)
+
+### 🛠️ Camaleon CMS
+- [AuthBypass - CVE-2025-2304](./Camaleon%20CMS/AuthBypass%20-%20CVE-2025-2304)
