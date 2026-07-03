@@ -102,3 +102,6 @@ Este repositorio contiene documentación y detalles sobre vulnerabilidades (CVEs
 
 ### 🛠️ GNU Bash
 - [RCE - CVE-2014-6271](./GNU%20Bash/RCE%20-%20CVE-2014-6271)
+
+### 🛠️ OpenSSL
+- [InfoDisclosure - CVE-2014-0160](./OpenSSL/InfoDisclosure%20-%20CVE-2014-0160)
