@@ -92,3 +92,6 @@ Este repositorio contiene documentación y detalles sobre vulnerabilidades (CVEs
 
 ### 🛠️ Grafana
 - [PathTraversal - CVE-2021-43798](./Grafana/PathTraversal%20-%20CVE-2021-43798)
+
+### 🛠️ CMS Made Simple
+- [SQLi - CVE-2019-9053](./CMS%20Made%20Simple/SQLi%20-%20CVE-2019-9053)
