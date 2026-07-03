@@ -95,3 +95,6 @@ Este repositorio contiene documentación y detalles sobre vulnerabilidades (CVEs
 
 ### 🛠️ CMS Made Simple
 - [SQLi - CVE-2019-9053](./CMS%20Made%20Simple/SQLi%20-%20CVE-2019-9053)
+
+### 🛠️ Microsoft Windows AFD
+- [LPE - CVE-2011-1249](./Microsoft%20Windows%20AFD/LPE%20-%20CVE-2011-1249)
