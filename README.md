@@ -59,6 +59,7 @@ Este repositorio contiene documentación y detalles sobre vulnerabilidades (CVEs
 - [LPE - CVE-2020-5752](./Druva%20inSync/LPE%20-%20CVE-2020-5752)
 
 ### 🛠️ Linux Kernel
+- [LPE - CVE-2017-16995](./Linux%20Kernel/LPE%20-%20CVE-2017-16995)
 - [CWE665 - CVE-2022-0847](./Linux%20Kernel/CWE665%20-%20CVE-2022-0847)
 - [LPE - CVE-2023-0386](./Linux%20Kernel/LPE%20-%20CVE-2023-0386)
 - [LPE - CVE-2021-3493](./Linux%20Kernel/LPE%20-%20CVE-2021-3493)
