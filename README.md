@@ -105,3 +105,6 @@ Este repositorio contiene documentación y detalles sobre vulnerabilidades (CVEs
 
 ### 🛠️ OpenSSL
 - [InfoDisclosure - CVE-2014-0160](./OpenSSL/InfoDisclosure%20-%20CVE-2014-0160)
+
+### 🛠️ HFS (HttpFileServer)
+- [RCE - CVE-2014-6287](./HFS%20(HttpFileServer)/RCE%20-%20CVE-2014-6287)
