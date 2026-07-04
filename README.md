@@ -114,3 +114,6 @@ Este repositorio contiene documentación y detalles sobre vulnerabilidades (CVEs
 
 ### 🛠️ PDF24 Creator
 - [LPE - CVE-2023-49147](./PDF24%20Creator/LPE%20-%20CVE-2023-49147)
+
+### 🛠️ Laravel
+- [RCE - CVE-2018-15133](./Laravel/RCE%20-%20CVE-2018-15133)
