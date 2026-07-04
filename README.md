@@ -111,3 +111,6 @@ Este repositorio contiene documentación y detalles sobre vulnerabilidades (CVEs
 
 ### 🛠️ Microsoft Windows Secondary Logon
 - [LPE - CVE-2016-0099](./Microsoft%20Windows%20Secondary%20Logon/LPE%20-%20CVE-2016-0099)
+
+### 🛠️ PDF24 Creator
+- [LPE - CVE-2023-49147](./PDF24%20Creator/LPE%20-%20CVE-2023-49147)
