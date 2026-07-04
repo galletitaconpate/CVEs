@@ -108,3 +108,6 @@ Este repositorio contiene documentación y detalles sobre vulnerabilidades (CVEs
 
 ### 🛠️ HFS (HttpFileServer)
 - [RCE - CVE-2014-6287](./HFS%20(HttpFileServer)/RCE%20-%20CVE-2014-6287)
+
+### 🛠️ Microsoft Windows Secondary Logon
+- [LPE - CVE-2016-0099](./Microsoft%20Windows%20Secondary%20Logon/LPE%20-%20CVE-2016-0099)
