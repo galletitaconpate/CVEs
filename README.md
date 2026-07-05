@@ -127,3 +127,6 @@ Este repositorio contiene documentación y detalles sobre vulnerabilidades (CVEs
 ### 🛠️ Magento
 - [RCE - CVE-2015-1398](./Magento/RCE%20-%20CVE-2015-1398)
 - [SQLi - CVE-2015-1397](./Magento/SQLi%20-%20CVE-2015-1397)
+
+### 🛠️ Nibbleblog
+- [RCE - CVE-2015-6967](./Nibbleblog/RCE%20-%20CVE-2015-6967)
