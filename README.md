@@ -117,3 +117,6 @@ Este repositorio contiene documentación y detalles sobre vulnerabilidades (CVEs
 
 ### 🛠️ Laravel
 - [RCE - CVE-2018-15133](./Laravel/RCE%20-%20CVE-2018-15133)
+
+### 🛠️ Metabase
+- [RCE - CVE-2023-38646](./Metabase/RCE%20-%20CVE-2023-38646)
