@@ -149,3 +149,6 @@ Este repositorio contiene documentación y detalles sobre vulnerabilidades (CVEs
 
 ### 🛠️ vsftpd
 - [RCE - CVE-2011-2523](./vsftpd/RCE%20-%20CVE-2011-2523)
+
+### 🛠️ Microsoft IIS
+- [RCE - CVE-2017-7269](./Microsoft%20IIS/RCE%20-%20CVE-2017-7269)
