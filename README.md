@@ -125,4 +125,5 @@ Este repositorio contiene documentación y detalles sobre vulnerabilidades (CVEs
 - [RCE - CVE-2010-2075](./UnrealIRCd/RCE%20-%20CVE-2010-2075)
 
 ### 🛠️ Magento
+- [RCE - CVE-2015-1398](./Magento/RCE%20-%20CVE-2015-1398)
 - [SQLi - CVE-2015-1397](./Magento/SQLi%20-%20CVE-2015-1397)
