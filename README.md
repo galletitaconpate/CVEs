@@ -146,3 +146,6 @@ Este repositorio contiene documentación y detalles sobre vulnerabilidades (CVEs
 
 ### 🛠️ Adobe ColdFusion
 - [RCE - CVE-2009-2265](./Adobe%20ColdFusion/RCE%20-%20CVE-2009-2265)
+
+### 🛠️ vsftpd
+- [RCE - CVE-2011-2523](./vsftpd/RCE%20-%20CVE-2011-2523)
