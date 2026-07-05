@@ -133,3 +133,6 @@ Este repositorio contiene documentación y detalles sobre vulnerabilidades (CVEs
 
 ### 🛠️ Microsoft Windows Server Service
 - [RCE - CVE-2008-4250](./Microsoft%20Windows%20Server%20Service/RCE%20-%20CVE-2008-4250)
+
+### 🛠️ Samba
+- [RCE - CVE-2007-2447](./Samba/RCE%20-%20CVE-2007-2447)
