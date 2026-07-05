@@ -120,3 +120,6 @@ Este repositorio contiene documentación y detalles sobre vulnerabilidades (CVEs
 
 ### 🛠️ Metabase
 - [RCE - CVE-2023-38646](./Metabase/RCE%20-%20CVE-2023-38646)
+
+### 🛠️ UnrealIRCd
+- [RCE - CVE-2010-2075](./UnrealIRCd/RCE%20-%20CVE-2010-2075)
