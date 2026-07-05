@@ -74,6 +74,7 @@ Este repositorio contiene documentación y detalles sobre vulnerabilidades (CVEs
 - [AuthBypass - CVE-2019-14287](./sudo/AuthBypass%20-%20CVE-2019-14287)
 
 ### 🛠️ Webmin
+- [RCE - CVE-2019-12840](./Webmin/RCE%20-%20CVE-2019-12840)
 - [RCE - CVE-2019-15107](./Webmin/RCE%20-%20CVE-2019-15107)
 
 ### 🛠️ Langflow
