@@ -152,3 +152,6 @@ Este repositorio contiene documentación y detalles sobre vulnerabilidades (CVEs
 
 ### 🛠️ Microsoft IIS
 - [RCE - CVE-2017-7269](./Microsoft%20IIS/RCE%20-%20CVE-2017-7269)
+
+### 🛠️ Paessler PRTG Network Monitor
+- [RCE - CVE-2018-9276](./Paessler%20PRTG%20Network%20Monitor/RCE%20-%20CVE-2018-9276)
