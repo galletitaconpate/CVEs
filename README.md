@@ -143,3 +143,6 @@ Este repositorio contiene documentación y detalles sobre vulnerabilidades (CVEs
 
 ### 🛠️ OpenNetAdmin
 - [RCE - CVE-2019-25065](./OpenNetAdmin/RCE%20-%20CVE-2019-25065)
+
+### 🛠️ Adobe ColdFusion
+- [RCE - CVE-2009-2265](./Adobe%20ColdFusion/RCE%20-%20CVE-2009-2265)
