@@ -139,3 +139,6 @@ Este repositorio contiene documentación y detalles sobre vulnerabilidades (CVEs
 
 ### 🛠️ Nostromo (nhttpd)
 - [RCE - CVE-2019-16278](./Nostromo%20(nhttpd)/RCE%20-%20CVE-2019-16278)
+
+### 🛠️ OpenNetAdmin
+- [RCE - CVE-2019-25065](./OpenNetAdmin/RCE%20-%20CVE-2019-25065)
