@@ -136,3 +136,6 @@ Este repositorio contiene documentación y detalles sobre vulnerabilidades (CVEs
 
 ### 🛠️ Samba
 - [RCE - CVE-2007-2447](./Samba/RCE%20-%20CVE-2007-2447)
+
+### 🛠️ Nostromo (nhttpd)
+- [RCE - CVE-2019-16278](./Nostromo%20(nhttpd)/RCE%20-%20CVE-2019-16278)
