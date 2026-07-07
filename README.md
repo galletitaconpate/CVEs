@@ -158,3 +158,6 @@ Este repositorio contiene documentación y detalles sobre vulnerabilidades (CVEs
 
 ### 🛠️ Joomla
 - [AuthBypass - CVE-2023-23752](./Joomla/AuthBypass%20-%20CVE-2023-23752)
+
+### 🛠️ apport
+- [LPE - CVE-2023-1326](./apport/LPE%20-%20CVE-2023-1326)
