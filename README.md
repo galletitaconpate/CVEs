@@ -155,3 +155,6 @@ Este repositorio contiene documentación y detalles sobre vulnerabilidades (CVEs
 
 ### 🛠️ Paessler PRTG Network Monitor
 - [RCE - CVE-2018-9276](./Paessler%20PRTG%20Network%20Monitor/RCE%20-%20CVE-2018-9276)
+
+### 🛠️ Joomla
+- [AuthBypass - CVE-2023-23752](./Joomla/AuthBypass%20-%20CVE-2023-23752)
