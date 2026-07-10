@@ -164,3 +164,6 @@ Este repositorio contiene documentación y detalles sobre vulnerabilidades (CVEs
 
 ### 🛠️ Apache ActiveMQ
 - [RCE - CVE-2023-46604](./Apache%20ActiveMQ/RCE%20-%20CVE-2023-46604)
+
+### 🛠️ vm2
+- [RCE - CVE-2023-30547](./vm2/RCE%20-%20CVE-2023-30547)
