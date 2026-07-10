@@ -161,3 +161,6 @@ Este repositorio contiene documentación y detalles sobre vulnerabilidades (CVEs
 
 ### 🛠️ apport
 - [LPE - CVE-2023-1326](./apport/LPE%20-%20CVE-2023-1326)
+
+### 🛠️ Apache ActiveMQ
+- [RCE - CVE-2023-46604](./Apache%20ActiveMQ/RCE%20-%20CVE-2023-46604)
