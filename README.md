@@ -167,3 +167,6 @@ Este repositorio contiene documentación y detalles sobre vulnerabilidades (CVEs
 
 ### 🛠️ vm2
 - [RCE - CVE-2023-30547](./vm2/RCE%20-%20CVE-2023-30547)
+
+### 🛠️ needrestart
+- [LPE - CVE-2024-48990](./needrestart/LPE%20-%20CVE-2024-48990)
