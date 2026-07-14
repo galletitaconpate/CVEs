@@ -170,3 +170,6 @@ Este repositorio contiene documentación y detalles sobre vulnerabilidades (CVEs
 
 ### 🛠️ needrestart
 - [LPE - CVE-2024-48990](./needrestart/LPE%20-%20CVE-2024-48990)
+
+### 🛠️ Microsoft Windows File Explorer
+- [AuthBypass - CVE-2025-24071](./Microsoft%20Windows%20File%20Explorer/AuthBypass%20-%20CVE-2025-24071)
