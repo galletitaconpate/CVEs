@@ -173,3 +173,6 @@ Este repositorio contiene documentación y detalles sobre vulnerabilidades (CVEs
 
 ### 🛠️ Microsoft Windows File Explorer
 - [AuthBypass - CVE-2025-24071](./Microsoft%20Windows%20File%20Explorer/AuthBypass%20-%20CVE-2025-24071)
+
+### 🛠️ Microsoft AD CS
+- [PrivEsc - CVE-2024-49019](./Microsoft%20AD%20CS/PrivEsc%20-%20CVE-2024-49019)
