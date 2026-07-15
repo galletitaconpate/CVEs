@@ -191,3 +191,6 @@ Este repositorio contiene documentación y detalles sobre vulnerabilidades (CVEs
 
 ### 🛠️ Erlang OTP SSH
 - [RCE - CVE-2025-32433](./Erlang%20OTP%20SSH/RCE%20-%20CVE-2025-32433)
+
+### 🛠️ Cacti
+- [RCE - CVE-2025-24367](./Cacti/RCE%20-%20CVE-2025-24367)
