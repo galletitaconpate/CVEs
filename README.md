@@ -194,3 +194,6 @@ Este repositorio contiene documentación y detalles sobre vulnerabilidades (CVEs
 
 ### 🛠️ Cacti
 - [RCE - CVE-2025-24367](./Cacti/RCE%20-%20CVE-2025-24367)
+
+### 🛠️ Docker Desktop
+- [SSRF - CVE-2025-9074](./Docker%20Desktop/SSRF%20-%20CVE-2025-9074)
