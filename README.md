@@ -179,3 +179,6 @@ Este repositorio contiene documentación y detalles sobre vulnerabilidades (CVEs
 
 ### 🛠️ ClamAV
 - [XXE - CVE-2023-20052](./ClamAV/XXE%20-%20CVE-2023-20052)
+
+### 🛠️ Drupal
+- [RCE - CVE-2018-7600](./Drupal/RCE%20-%20CVE-2018-7600)
