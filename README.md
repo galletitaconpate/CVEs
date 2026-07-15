@@ -182,3 +182,6 @@ Este repositorio contiene documentación y detalles sobre vulnerabilidades (CVEs
 
 ### 🛠️ Drupal
 - [RCE - CVE-2018-7600](./Drupal/RCE%20-%20CVE-2018-7600)
+
+### 🛠️ PHP
+- [RCE - ADV20210328-PHP-GIT-BACKDOOR](./PHP/RCE%20-%20ADV20210328-PHP-GIT-BACKDOOR)
