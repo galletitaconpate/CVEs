@@ -222,6 +222,9 @@ Each vulnerability lives in its own folder, following the convention `<Product>/
 ### ZoneMinder
 - [SQLi - CVE-2024-51482](./ZoneMinder/SQLi%20-%20CVE-2024-51482)
 
+### Apache Struts2
+- [PathTraversal - CVE-2024-53677](./Apache%20Struts2/PathTraversal%20-%20CVE-2024-53677)
+
 <!-- INDEX:END -->
 
 ## License
