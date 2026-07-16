@@ -225,6 +225,9 @@ Each vulnerability lives in its own folder, following the convention `<Product>/
 ### Apache Struts2
 - [PathTraversal - CVE-2024-53677](./Apache%20Struts2/PathTraversal%20-%20CVE-2024-53677)
 
+### CUPS
+- [RCE - CVE-2024-47176](./CUPS/RCE%20-%20CVE-2024-47176)
+
 <!-- INDEX:END -->
 
 ## License
