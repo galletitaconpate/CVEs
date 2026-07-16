@@ -228,6 +228,9 @@ Each vulnerability lives in its own folder, following the convention `<Product>/
 ### CUPS
 - [RCE - CVE-2024-47176](./CUPS/RCE%20-%20CVE-2024-47176)
 
+### pac4j
+- [AuthBypass - CVE-2026-29000](./pac4j/AuthBypass%20-%20CVE-2026-29000)
+
 <!-- INDEX:END -->
 
 ## License
