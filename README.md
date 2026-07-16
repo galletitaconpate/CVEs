@@ -203,6 +203,9 @@ Each vulnerability lives in its own folder, following the convention `<Product>/
 ### Samba
 - [RCE - CVE-2007-2447](./Samba/RCE%20-%20CVE-2007-2447)
 
+### snapd
+- [LPE - CVE-2026-3888](./snapd/LPE%20-%20CVE-2026-3888)
+
 ### sudo
 - [AuthBypass - CVE-2019-14287](./sudo/AuthBypass%20-%20CVE-2019-14287)
 
