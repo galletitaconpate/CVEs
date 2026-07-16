@@ -164,6 +164,9 @@ Each vulnerability lives in its own folder, following the convention `<Product>/
 ### Next.js
 - [RCE - CVE-2025-55182](./Next.js/RCE%20-%20CVE-2025-55182)
 
+### Nginx-UI
+- [AuthBypass - CVE-2026-27944](./Nginx-UI/AuthBypass%20-%20CVE-2026-27944)
+
 ### Nibbleblog
 - [RCE - CVE-2015-6967](./Nibbleblog/RCE%20-%20CVE-2015-6967)
 
