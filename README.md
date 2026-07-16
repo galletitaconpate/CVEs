@@ -37,6 +37,9 @@ Each vulnerability lives in its own folder, following the convention `<Product>/
 ### Apache ActiveMQ
 - [RCE - CVE-2023-46604](./Apache%20ActiveMQ/RCE%20-%20CVE-2023-46604)
 
+### Apache Struts2
+- [PathTraversal - CVE-2024-53677](./Apache%20Struts2/PathTraversal%20-%20CVE-2024-53677)
+
 ### apport
 - [LPE - CVE-2023-1326](./apport/LPE%20-%20CVE-2023-1326)
 
@@ -57,6 +60,9 @@ Each vulnerability lives in its own folder, following the convention `<Product>/
 
 ### CrushFTP
 - [AuthBypass - CVE-2025-31161](./CrushFTP/AuthBypass%20-%20CVE-2025-31161)
+
+### CUPS
+- [RCE - CVE-2024-47176](./CUPS/RCE%20-%20CVE-2024-47176)
 
 ### CVE-2023-44487
 - [HTTP/2 Rapid Reset - CVE-2023-44487.py](./CVE-2023-44487/CVE-2023-44487.py)
@@ -173,6 +179,9 @@ Each vulnerability lives in its own folder, following the convention `<Product>/
 ### OpenSTAManager
 - [RCE - CVE-2025-69212](./OpenSTAManager/RCE%20-%20CVE-2025-69212)
 
+### pac4j
+- [AuthBypass - CVE-2026-29000](./pac4j/AuthBypass%20-%20CVE-2026-29000)
+
 ### Paessler PRTG Network Monitor
 - [RCE - CVE-2018-9276](./Paessler%20PRTG%20Network%20Monitor/RCE%20-%20CVE-2018-9276)
 
@@ -221,15 +230,6 @@ Each vulnerability lives in its own folder, following the convention `<Product>/
 
 ### ZoneMinder
 - [SQLi - CVE-2024-51482](./ZoneMinder/SQLi%20-%20CVE-2024-51482)
-
-### Apache Struts2
-- [PathTraversal - CVE-2024-53677](./Apache%20Struts2/PathTraversal%20-%20CVE-2024-53677)
-
-### CUPS
-- [RCE - CVE-2024-47176](./CUPS/RCE%20-%20CVE-2024-47176)
-
-### pac4j
-- [AuthBypass - CVE-2026-29000](./pac4j/AuthBypass%20-%20CVE-2026-29000)
 
 <!-- INDEX:END -->
 
