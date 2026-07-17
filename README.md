@@ -28,6 +28,9 @@ Each vulnerability lives in its own folder, following the convention `<Product>/
 
 ## Vulnerabilities by Product
 
+### Adminer
+- [FileRead - CVE-2020-35572](./Adminer/FileRead%20-%20CVE-2020-35572)
+
 ### Adobe ColdFusion
 - [RCE - CVE-2009-2265](./Adobe%20ColdFusion/RCE%20-%20CVE-2009-2265)
 
