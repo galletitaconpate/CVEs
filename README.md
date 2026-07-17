@@ -40,6 +40,9 @@ Each vulnerability lives in its own folder, following the convention `<Product>/
 ### Apache ActiveMQ
 - [RCE - CVE-2023-46604](./Apache%20ActiveMQ/RCE%20-%20CVE-2023-46604)
 
+### Apache OFBiz
+- [RCE - CVE-2023-51467](./Apache%20OFBiz/RCE%20-%20CVE-2023-51467)
+
 ### Apache Struts2
 - [PathTraversal - CVE-2024-53677](./Apache%20Struts2/PathTraversal%20-%20CVE-2024-53677)
 
