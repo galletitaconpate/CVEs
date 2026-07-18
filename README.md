@@ -88,6 +88,9 @@ Each vulnerability lives in its own folder, following the convention `<Product>/
 ### Erlang OTP SSH
 - [RCE - CVE-2025-32433](./Erlang%20OTP%20SSH/RCE%20-%20CVE-2025-32433)
 
+### esm.sh
+- [LFI - CVE-2025-59341](./esm.sh/LFI%20-%20CVE-2025-59341)
+
 ### FreePBX
 - [SQLi - CVE-2025-57819](./FreePBX/SQLi%20-%20CVE-2025-57819)
 - [PathTraversal - CVE-2025-61678](./FreePBX/PathTraversal%20-%20CVE-2025-61678)
