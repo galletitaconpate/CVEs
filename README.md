@@ -203,6 +203,9 @@ Each vulnerability lives in its own folder, following the convention `<Product>/
 ### PDF.js
 - [RCE - CVE-2024-4367](./PDF.js/RCE%20-%20CVE-2024-4367)
 
+### pdfminer.six
+- [RCE - CVE-2025-64512](./pdfminer.six/RCE%20-%20CVE-2025-64512)
+
 ### PHP
 - [RCE - ADV20210328-PHP-GIT-BACKDOOR](./PHP/RCE%20-%20ADV20210328-PHP-GIT-BACKDOOR)
 
