@@ -228,6 +228,9 @@ Each vulnerability lives in its own folder, following the convention `<Product>/
 ### PrivateBin
 - [LFI - CVE-2025-64714](./PrivateBin/LFI%20-%20CVE-2025-64714)
 
+### Roundcube Webmail
+- [RCE - CVE-2025-49113](./Roundcube%20Webmail/RCE%20-%20CVE-2025-49113)
+
 ### Samba
 - [RCE - CVE-2026-4480](./Samba/RCE%20-%20CVE-2026-4480)
 - [RCE - CVE-2007-2447](./Samba/RCE%20-%20CVE-2007-2447)
