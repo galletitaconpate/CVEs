@@ -110,6 +110,9 @@ Each vulnerability lives in its own folder, following the convention `<Product>/
 ### HFS (HttpFileServer)
 - [RCE - CVE-2014-6287](./HFS%20(HttpFileServer)/RCE%20-%20CVE-2014-6287)
 
+### ImageMagick
+- [RCE - CVE-2024-41817](./ImageMagick/RCE%20-%20CVE-2024-41817)
+
 ### Jenkins
 - [CWE200 - CVE-2025-59474](./Jenkins/CWE200%20-%20CVE-2025-59474)
 
