@@ -49,6 +49,9 @@ Each vulnerability lives in its own folder, following the convention `<Product>/
 ### apport
 - [LPE - CVE-2023-1326](./apport/LPE%20-%20CVE-2023-1326)
 
+### below
+- [LPE - CVE-2025-27591](./below/LPE%20-%20CVE-2025-27591)
+
 ### Bludit
 - [RCE - CVE-2019-16113](./Bludit/RCE%20-%20CVE-2019-16113)
 
