@@ -95,6 +95,9 @@ Each vulnerability lives in its own folder, following the convention `<Product>/
 - [SQLi - CVE-2025-57819](./FreePBX/SQLi%20-%20CVE-2025-57819)
 - [PathTraversal - CVE-2025-61678](./FreePBX/PathTraversal%20-%20CVE-2025-61678)
 
+### Ghost CMS
+- [PathTraversal - CVE-2023-40028](./Ghost%20CMS/PathTraversal%20-%20CVE-2023-40028)
+
 ### GlobalProtect
 - [RXSS - CVE-2025-0133](./GlobalProtect/RXSS%20-%20CVE-2025-0133)
 
