@@ -116,6 +116,9 @@ Each vulnerability lives in its own folder, following the convention `<Product>/
 ### ImageMagick
 - [RCE - CVE-2024-41817](./ImageMagick/RCE%20-%20CVE-2024-41817)
 
+### ISPConfig
+- [RCE - CVE-2023-46818](./ISPConfig/RCE%20-%20CVE-2023-46818)
+
 ### Jenkins
 - [CWE200 - CVE-2025-59474](./Jenkins/CWE200%20-%20CVE-2025-59474)
 
