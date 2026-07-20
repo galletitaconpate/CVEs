@@ -108,6 +108,7 @@ Each vulnerability lives in its own folder, following the convention `<Product>/
 - [RCE - CVE-2014-6271](./GNU%20Bash/RCE%20-%20CVE-2014-6271)
 
 ### Grafana
+- [RCE - CVE-2024-9264](./Grafana/RCE%20-%20CVE-2024-9264)
 - [PathTraversal - CVE-2021-43798](./Grafana/PathTraversal%20-%20CVE-2021-43798)
 
 ### HFS (HttpFileServer)
