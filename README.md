@@ -269,6 +269,9 @@ Each vulnerability lives in its own folder, following the convention `<Product>/
 ### WordPress Canto Plugin
 - [RFI - CVE-2023-3452](./WordPress%20Canto%20Plugin/RFI%20-%20CVE-2023-3452)
 
+### XWiki Platform
+- [RCE - CVE-2025-24893](./XWiki%20Platform/RCE%20-%20CVE-2025-24893)
+
 ### ZoneMinder
 - [SQLi - CVE-2024-51482](./ZoneMinder/SQLi%20-%20CVE-2024-51482)
 
