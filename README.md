@@ -288,6 +288,9 @@ Each vulnerability lives in its own folder, following the convention `<Product>/
 ### Wing FTP Server
 - [RCE - CVE-2025-47812](./Wing%20FTP%20Server/RCE%20-%20CVE-2025-47812)
 
+### WonderCMS
+- [RCE - CVE-2023-41425](./WonderCMS/RCE%20-%20CVE-2023-41425)
+
 ### WordPress
 - [SQLi - CVE-2026-63030](./WordPress/SQLi%20-%20CVE-2026-63030)
 
