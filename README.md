@@ -82,6 +82,9 @@ Each vulnerability lives in its own folder, following the convention `<Product>/
 ### Docker Desktop
 - [SSRF - CVE-2025-9074](./Docker%20Desktop/SSRF%20-%20CVE-2025-9074)
 
+### Dolibarr
+- [RCE - CVE-2023-30253](./Dolibarr/RCE%20-%20CVE-2023-30253)
+
 ### Drupal
 - [RCE - CVE-2018-7600](./Drupal/RCE%20-%20CVE-2018-7600)
 
