@@ -265,6 +265,9 @@ Each vulnerability lives in its own folder, following the convention `<Product>/
 ### snapd
 - [LPE - CVE-2026-3888](./snapd/LPE%20-%20CVE-2026-3888)
 
+### SQLPad
+- [SSTI - CVE-2022-0944](./SQLPad/SSTI%20-%20CVE-2022-0944)
+
 ### sudo
 - [LPE - CVE-2025-32462](./sudo/LPE%20-%20CVE-2025-32462)
 - [AuthBypass - CVE-2019-14287](./sudo/AuthBypass%20-%20CVE-2019-14287)
