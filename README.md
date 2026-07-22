@@ -61,6 +61,9 @@ Each vulnerability lives in its own folder, following the convention `<Product>/
 ### Camaleon CMS
 - [AuthBypass - CVE-2025-2304](./Camaleon%20CMS/AuthBypass%20-%20CVE-2025-2304)
 
+### Chamilo LMS
+- [RCE - CVE-2023-4220](./Chamilo%20LMS/RCE%20-%20CVE-2023-4220)
+
 ### ClamAV
 - [XXE - CVE-2023-20052](./ClamAV/XXE%20-%20CVE-2023-20052)
 
