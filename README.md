@@ -37,6 +37,9 @@ Each vulnerability lives in its own folder, following the convention `<Product>/
 ### ADV190005
 - [HTTP/2 Settings Flood - adv190005.py](./ADV190005/adv190005.py)
 
+### aiohttp
+- [PathTraversal - CVE-2024-23334](./aiohttp/PathTraversal%20-%20CVE-2024-23334)
+
 ### Apache ActiveMQ
 - [RCE - CVE-2023-46604](./Apache%20ActiveMQ/RCE%20-%20CVE-2023-46604)
 
