@@ -246,6 +246,9 @@ Each vulnerability lives in its own folder, following the convention `<Product>/
 ### PHP
 - [RCE - ADV20210328-PHP-GIT-BACKDOOR](./PHP/RCE%20-%20ADV20210328-PHP-GIT-BACKDOOR)
 
+### Pluck
+- [RCE - CVE-2023-50564](./Pluck/RCE%20-%20CVE-2023-50564)
+
 ### polkit
 - [LPE - CVE-2021-4034](./polkit/LPE%20-%20CVE-2021-4034)
 
