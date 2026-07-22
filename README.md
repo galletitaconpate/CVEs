@@ -91,6 +91,9 @@ Each vulnerability lives in its own folder, following the convention `<Product>/
 ### Druva inSync
 - [LPE - CVE-2020-5752](./Druva%20inSync/LPE%20-%20CVE-2020-5752)
 
+### Enlightenment
+- [LPE - CVE-2022-37706](./Enlightenment/LPE%20-%20CVE-2022-37706)
+
 ### Erlang OTP SSH
 - [RCE - CVE-2025-32433](./Erlang%20OTP%20SSH/RCE%20-%20CVE-2025-32433)
 
