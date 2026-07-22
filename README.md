@@ -132,6 +132,9 @@ Each vulnerability lives in its own folder, following the convention `<Product>/
 ### Joomla
 - [AuthBypass - CVE-2023-23752](./Joomla/AuthBypass%20-%20CVE-2023-23752)
 
+### js2py
+- [RCE - CVE-2024-28397](./js2py/RCE%20-%20CVE-2024-28397)
+
 ### Keycloak
 - [CWE200 - CVE-2020-27838](./Keycloak/CWE200%20-%20CVE-2020-27838)
 - [RXSS - CVE-2021-20323](./Keycloak/RXSS%20-%20CVE-2021-20323)
