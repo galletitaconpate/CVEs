@@ -107,6 +107,9 @@ Each vulnerability lives in its own folder, following the convention `<Product>/
 ### Ghost CMS
 - [PathTraversal - CVE-2023-40028](./Ghost%20CMS/PathTraversal%20-%20CVE-2023-40028)
 
+### GitPython
+- [RCE - CVE-2022-24439](./GitPython/RCE%20-%20CVE-2022-24439)
+
 ### GlobalProtect
 - [RXSS - CVE-2025-0133](./GlobalProtect/RXSS%20-%20CVE-2025-0133)
 
