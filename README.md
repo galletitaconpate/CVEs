@@ -146,6 +146,9 @@ Each vulnerability lives in its own folder, following the convention `<Product>/
 ### Laravel
 - [RCE - CVE-2018-15133](./Laravel/RCE%20-%20CVE-2018-15133)
 
+### LimeSurvey
+- [RCE - CVE-2021-44967](./LimeSurvey/RCE%20-%20CVE-2021-44967)
+
 ### Linux Kernel
 - [LPE - CVE-2017-16995](./Linux%20Kernel/LPE%20-%20CVE-2017-16995)
 - [CWE665 - CVE-2022-0847](./Linux%20Kernel/CWE665%20-%20CVE-2022-0847)
