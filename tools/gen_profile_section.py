@@ -1,19 +1,20 @@
 #!/usr/bin/env python3
-"""Generate the `exploit development` section of the profile README.
+"""Generate the managed sections of the profile README.
 
-Reads every entry's metadata.json and renders one markdown block: the newest
-advisory years as visible tables, everything older folded into a <details>.
-Sorting is year descending, then CVSS descending, so the most recent and most
-severe work is what a visitor reads first and nothing has to be reordered by
-hand as entries are added.
+Three blocks, each spliced between its own pair of marker comments:
+
+    <!-- exploit-development:start -->   from every entry's metadata.json
+    <!-- bug-bounty:start -->           from data/profile.json
+    <!-- certifications:start -->       from data/profile.json
+
+Exploits are ordered year descending then CVSS descending, so the most recent
+and most severe work reads first and nothing needs reordering by hand. The
+bug bounty and certification figures come from the same profile.json that feeds
+wolfhacking.com.ar, so the site and the README cannot disagree about them.
 
     python3 tools/gen_profile_section.py                       # print to stdout
-    python3 tools/gen_profile_section.py --write ../README.md   # splice into a README
-
-Splicing replaces whatever sits between the two marker comments:
-
-    <!-- exploit-development:start -->
-    <!-- exploit-development:end -->
+    python3 tools/gen_profile_section.py --write ../README.md  # splice into a README
+    python3 tools/gen_profile_section.py --write <p> --check    # exit 1 if stale
 
 The markers are left in place, so the same command is safe to re-run.
 """
@@ -22,89 +23,33 @@ import argparse
 import json
 import os
 import sys
-import urllib.parse
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
-from cvss import year_of  # noqa: E402
+from archive import (  # noqa: E402
+    REPO_URL,
+    SEVERITY_ORDER,
+    class_label,
+    entry_url,
+    load_entries,
+    sort_key,
+)
 
-REPO_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-REPO_URL = "https://github.com/galletitaconpate/verified-exploits"
 START_MARKER = "<!-- exploit-development:start -->"
 END_MARKER = "<!-- exploit-development:end -->"
+
+# The profile README carries three generated blocks. Certifications and bug
+# bounty come from data/profile.json, the same file that feeds the website, so
+# the two never disagree about a percentage or a reputation score.
+PROFILE_PATH = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "data", "profile.json")
+BOUNTY_MARKERS = ("<!-- bug-bounty:start -->", "<!-- bug-bounty:end -->")
+CERT_MARKERS = ("<!-- certifications:start -->", "<!-- certifications:end -->")
 
 # Years rendered as their own visible table. Everything older is collapsed.
 FEATURED_YEARS = (2026,)
 # Recent-but-not-current years show only their strongest entries up front.
 SELECTED_YEAR = 2025
 SELECTED_LIMIT = 10
-
-# Directory names are terse for filesystem reasons; spell them out for readers.
-CLASS_LABELS = {
-    "RCE": "RCE",
-    "LPE": "LPE",
-    "PrivEsc": "Priv Esc",
-    "AuthBypass": "Auth Bypass",
-    "PathTraversal": "Path Traversal",
-    "SQLi": "SQL Injection",
-    "RXSS": "Reflected XSS",
-    "XSS": "XSS",
-    "SSRF": "SSRF",
-    "SSTI": "SSTI",
-    "XXE": "XXE",
-    "LFI": "LFI",
-    "RFI": "RFI",
-    "FileRead": "File Read",
-    "InfoDisclosure": "Info Disclosure",
-    "CWE200": "Info Disclosure",
-    "CWE665": "Improper Init",
-    "DoS": "DoS",
-}
-
-SEVERITY_ORDER = ("CRITICAL", "HIGH", "MEDIUM", "LOW")
-
-
-def load_entries():
-    """Collect every entry in the archive as a flat list of dicts."""
-    entries = []
-    for dirpath, dirnames, filenames in os.walk(REPO_ROOT):
-        dirnames[:] = [d for d in dirnames if not d.startswith(".") and d != "tools"]
-        if "metadata.json" not in filenames:
-            continue
-        path = os.path.join(dirpath, "metadata.json")
-        try:
-            with open(path, encoding="utf-8") as handle:
-                entry = json.load(handle)
-        except (OSError, json.JSONDecodeError) as error:
-            print(f"warning: skipping {path}: {error}", file=sys.stderr)
-            continue
-        relative = os.path.relpath(dirpath, REPO_ROOT)
-        entry["_dir"] = relative
-        entry["_product"] = entry.get("product") or relative.split(os.sep)[0]
-        entry["_year"] = year_of(entry.get("id")) or 0
-        entry["_score"] = (entry.get("cvss") or {}).get("score")
-        entries.append(entry)
-    return entries
-
-
-def sort_key(entry):
-    """Newest first, then hardest hitting, then by id for a stable order."""
-    return (
-        -entry["_year"],
-        -(entry["_score"] if entry["_score"] is not None else -1),
-        entry.get("id") or "",
-    )
-
-
-def entry_url(entry):
-    """Absolute URL to an entry's folder, with spaces escaped for markdown."""
-    quoted = urllib.parse.quote(entry["_dir"].replace(os.sep, "/"))
-    return f"{REPO_URL}/tree/main/{quoted}"
-
-
-def class_label(entry):
-    raw = entry.get("class") or "-"
-    return CLASS_LABELS.get(raw, raw)
 
 
 def score_cell(entry):
@@ -221,28 +166,153 @@ def render_section(entries):
     return "\n".join(lines)
 
 
-def splice(readme_path, section):
-    """Replace the marked block in a README, or report what is missing."""
-    with open(readme_path, encoding="utf-8") as handle:
-        content = handle.read()
+MONTHS = {
+    "01": "January", "02": "February", "03": "March", "04": "April",
+    "05": "May", "06": "June", "07": "July", "08": "August",
+    "09": "September", "10": "October", "11": "November", "12": "December",
+}
 
-    if START_MARKER in content and END_MARKER in content:
-        head, _, rest = content.partition(START_MARKER)
-        _, _, tail = rest.partition(END_MARKER)
-        updated = f"{head}{section}{tail}"
-    else:
-        raise SystemExit(
-            f"error: {readme_path} has no marker pair.\n"
-            f"Add these two lines around the section to be managed:\n"
-            f"  {START_MARKER}\n  {END_MARKER}"
+
+def load_profile():
+    """Facts shared with the website: certifications, bug bounty, advisories."""
+    with open(PROFILE_PATH, encoding="utf-8") as handle:
+        return json.load(handle)
+
+
+def pretty_date(value):
+    """'2026-07' -> 'July 2026'."""
+    if not value:
+        return ""
+    parts = str(value).split("-")
+    month = MONTHS.get(parts[1]) if len(parts) > 1 else None
+    return f"{month} {parts[0]}" if month else parts[0]
+
+
+def render_bounty(profile):
+    """The bug bounty tables: platform stats plus published advisories."""
+    bb = profile.get("bugBounty", {})
+    h1 = bb.get("hackerone", {})
+    cs = bb.get("cyscope", {})
+    advisories = profile.get("advisories", [])
+
+    lines = [BOUNTY_MARKERS[0], "## bug bounty", "", "| Platform | Stats |", "|----------|-------|"]
+
+    if h1:
+        handle = f"[`{h1['handle']}`]({h1['url']})" if h1.get("url") else f"`{h1.get('handle')}`"
+        lines.append(
+            f"| **HackerOne** · {handle} | 🎯 Signal **{h1['signal']:.1f}** "
+            f"({h1['signalPercentile']}th pct) · Impact **{h1['impact']:.1f}** "
+            f"({h1['impactPercentile']}th pct) · **{h1['reputation']}** rep · "
+            f"**{h1['credits']}** credited · **{h1['thanks']}** thanks |"
+        )
+    if cs:
+        handle = f"[`{cs['handle']}`]({cs['url']})" if cs.get("url") else f"`{cs.get('handle')}`"
+        lines.append(
+            f"| **CyScope** · {handle} | 🏆 Rank **#{cs['rank']}** · **{cs['points']} pts** · "
+            f"**{cs['vulns']} vulns** · **{cs['accuracy']}%** accuracy · "
+            f"avg severity **{cs['avgSeverity']}** |"
         )
 
-    if updated == content:
+    if advisories:
+        sole = sum(1 for a in advisories if a.get("soleCredit"))
+        shared = len(advisories) - sole
+        counts = f"{len(advisories)} advisories"
+        if sole:
+            counts += f" · {sole} sole credit"
+        if shared:
+            counts += f" · {shared} co-credited"
+
+        lines += [
+            "",
+            "### 🛡️ Security Research & Disclosures",
+            "",
+            f"*{counts}.*",
+            "",
+            "| ID | Target | Severity | Fixed in | Finding |",
+            "| :--- | :--- | :--- | :--- | :--- |",
+        ]
+        for a in advisories:
+            # A shared credit is labelled as such. Anyone opening the advisory
+            # sees every reporter on it, so the table has to match the source.
+            credit = "" if a.get("soleCredit") else f" *(co-credited, {a.get('reporters', '?')} reporters)*"
+            score = f"{a['score']}" if a.get("score") is not None else "—"
+            lines.append(
+                f"| [{a['id']}]({a['url']}) | {a['product']} | "
+                f"{a.get('severityLabel') or a.get('severity')} {score} | "
+                f"`{a['fixed']}` | {a['title']}{credit} |"
+            )
+
+    lines.append("")
+    lines.append(BOUNTY_MARKERS[1])
+    return "\n".join(lines)
+
+
+def render_certifications(profile):
+    """Certification table: earned, Pro Labs, and in-progress with percentages."""
+    certs = profile.get("certifications", {})
+    lines = [CERT_MARKERS[0], "## certifications", "", "| Badge | Name | Status |", "|-------|------|--------|"]
+
+    for cert in certs.get("earned", []):
+        name = cert["name"]
+        if cert.get("badge"):
+            name = f"[{name}]({cert['badge']})"
+        lines.append(f"| 🟩 {cert['id']} | {name} | ✅ {pretty_date(cert.get('date')) or 'Earned'} |")
+
+    for lab in certs.get("proLabs", []):
+        lines.append(f"| 🧪 {lab['name']} | HTB Pro Lab | ✅ {pretty_date(lab.get('date')) or 'Completed'} |")
+
+    for cert in certs.get("inProgress", []):
+        lines.append(f"| 🟦 {cert['id']} | {cert['name']} | 🔄 {cert['progress']}% |")
+
+    lines.append("")
+    lines.append(CERT_MARKERS[1])
+    return "\n".join(lines)
+
+
+def splice_block(content, block, markers):
+    """Replace one marked block, leaving the markers in place."""
+    start, end = markers
+    if start not in content or end not in content:
+        return content, False
+    head, _, rest = content.partition(start)
+    _, _, tail = rest.partition(end)
+    return f"{head}{block}{tail}", True
+
+
+def build_blocks(entries, profile):
+    """Every generated block, paired with the markers it belongs between."""
+    return [
+        (render_section(entries), (START_MARKER, END_MARKER), "exploit development"),
+        (render_bounty(profile), BOUNTY_MARKERS, "bug bounty"),
+        (render_certifications(profile), CERT_MARKERS, "certifications"),
+    ]
+
+
+def splice(readme_path, blocks):
+    """Replace each marked block in a README, reporting what was missing."""
+    with open(readme_path, encoding="utf-8") as handle:
+        original = handle.read()
+
+    content = original
+    missing = []
+    for block, markers, name in blocks:
+        content, ok = splice_block(content, block, markers)
+        if not ok:
+            missing.append((name, markers))
+
+    if missing:
+        detail = "\n".join(f"  {name}: {m[0]} ... {m[1]}" for name, m in missing)
+        raise SystemExit(
+            f"error: {readme_path} is missing marker pairs for:\n{detail}\n"
+            f"Add each pair around the section it should manage."
+        )
+
+    if content == original:
         print(f"{readme_path}: already up to date")
         return False
     with open(readme_path, "w", encoding="utf-8") as handle:
-        handle.write(updated)
-    print(f"{readme_path}: section updated")
+        handle.write(content)
+    print(f"{readme_path}: updated")
     return True
 
 
@@ -252,20 +322,23 @@ def main():
     parser.add_argument("--check", action="store_true", help="exit 1 if --write target is stale")
     args = parser.parse_args()
 
-    section = render_section(load_entries())
+    blocks = build_blocks(load_entries(), load_profile())
 
     if not args.write:
-        print(section)
+        print("\n\n".join(block for block, _, _ in blocks))
         return 0
 
     if args.check:
         with open(args.write, encoding="utf-8") as handle:
             content = handle.read()
-        stale = section not in content
-        print(f"{args.write}: {'stale' if stale else 'up to date'}")
-        return 1 if stale else 0
+        stale = [name for block, _, name in blocks if block not in content]
+        if stale:
+            print(f"{args.write}: stale ({', '.join(stale)})")
+            return 1
+        print(f"{args.write}: up to date")
+        return 0
 
-    splice(args.write, section)
+    splice(args.write, blocks)
     return 0
 
 

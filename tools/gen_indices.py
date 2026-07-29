@@ -16,16 +16,19 @@ entries. This replaces it:
 """
 
 import argparse
-import json
 import os
 import sys
-import urllib.parse
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
+from archive import (  # noqa: E402
+    REPO_ROOT,
+    by_product_key,
+    load_entries,
+    relative_link,
+)
 from cwe_names import CWE_NAMES  # noqa: E402
 
-REPO_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 START_MARKER = "<!-- INDEX:START -->"
 END_MARKER = "<!-- INDEX:END -->"
 
@@ -39,34 +42,6 @@ PREAMBLE = (
     "it is\n"
     "filed under its CVE and the rest are listed as aliases.\n"
 )
-
-
-def link(path):
-    """Repo-relative markdown link target for an entry directory."""
-    return "./" + urllib.parse.quote(path.replace(os.sep, "/"))
-
-
-def load_entries():
-    """Every entry in the archive, annotated with its directory and product."""
-    entries = []
-    for dirpath, dirnames, filenames in os.walk(REPO_ROOT):
-        dirnames[:] = [d for d in dirnames if not d.startswith(".") and d != "tools"]
-        if "metadata.json" not in filenames:
-            continue
-        with open(os.path.join(dirpath, "metadata.json"), encoding="utf-8") as handle:
-            entry = json.load(handle)
-        relative = os.path.relpath(dirpath, REPO_ROOT)
-        entry["_dir"] = relative
-        entry["_product"] = entry.get("product") or relative.split(os.sep)[0]
-        # Entries that predate the <Product>/<CLASS> - <ID> layout sit at the
-        # repository root and stay there: renaming breaks inbound links.
-        entry["_flat"] = os.sep not in relative
-        entries.append(entry)
-    return entries
-
-
-def by_product_key(entry):
-    return (entry["_product"].lower(), entry.get("class") or "", entry.get("id") or "")
 
 
 def cwe_sort_key(cwe):
@@ -88,7 +63,7 @@ def render_product_index(entries):
         lines.append(f"### {product}")
         for entry in sorted(products[product], key=by_product_key):
             label = f"{entry.get('class') or 'entry'} - {entry.get('id') or entry['_dir']}"
-            lines.append(f"- [{label}]({link(entry['_dir'])})")
+            lines.append(f"- [{label}]({relative_link(entry)})")
         lines.append("")
 
     flat = sorted((e for e in entries if e["_flat"]), key=by_product_key)
@@ -96,7 +71,7 @@ def render_product_index(entries):
         lines.append(
             "> The following entries predate the `<Product>/<CLASS> - <ID>` layout and are kept at "
             "their original paths on purpose, since renaming them would break inbound links: "
-            + ", ".join(f"[`{e['_dir']}`]({link(e['_dir'])})" for e in flat)
+            + ", ".join(f"[`{e['_dir']}`]({relative_link(e)})" for e in flat)
             + "."
         )
         lines.append("")
@@ -127,7 +102,7 @@ def render_class_index(entries):
             label = f"{entry['_product']} - {entry.get('id') or entry['_dir']}"
             fixed = (entry.get("fixed") or "").strip()
             suffix = f" - fixed in {fixed}" if fixed else ""
-            lines.append(f"- [{label}]({link(entry['_dir'])}){suffix}")
+            lines.append(f"- [{label}]({relative_link(entry)}){suffix}")
     lines.append("")
     return "\n".join(lines)
 
@@ -159,7 +134,7 @@ def render_cwe_index(entries):
         severity = (entry.get("severity") or "").upper()
         if severity and severity != "UNKNOWN":
             label += f" ({severity})"
-        return f"- [{label}]({link(entry['_dir'])})"
+        return f"- [{label}]({relative_link(entry)})"
 
     for cwe in sorted(weaknesses, key=cwe_sort_key):
         name = CWE_NAMES.get(cwe)

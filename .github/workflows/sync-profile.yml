@@ -1,14 +1,19 @@
-name: sync profile section
+name: sync generated artifacts
 
-# Keeps the generated artifacts in step with the entries: the two indices and the
-# README listing in this repository, and the "exploit development" section of the
-# profile README. Runs when entries change, weekly to pick up CVSS scores that
-# upstream published after an entry was filed, and on demand.
+# Keeps every generated artifact in step with the two sources of truth
+# (*/metadata.json and data/profile.json): the indices here, the managed blocks
+# of the profile README, and site-data.js on the website.
+#
+# Deliberately one workflow rather than one per destination. The backfill step
+# calls three external APIs and mutates the metadata, so splitting it would
+# double that load and let two concurrent runs push conflicting states, leaving
+# the profile and the site reflecting different enrichment.
 on:
   push:
     branches: [main]
     paths:
       - "**/metadata.json"
+      - "data/**"
       - "tools/**"
       - ".github/workflows/sync-profile.yml"
   schedule:
@@ -23,6 +28,12 @@ on:
 
 permissions:
   contents: write
+
+# A push that lands while the cron is running would otherwise race it to the
+# same branch and one of the two would fail to push.
+concurrency:
+  group: sync-artifacts
+  cancel-in-progress: false
 
 jobs:
   sync:
@@ -50,7 +61,7 @@ jobs:
 
       - name: Regenerate indices
         # Must follow the backfill: the weakness index shows severity, so a
-        # score change upstream rewrites index content too.
+        # score published upstream changes index content too.
         run: python3 archive/tools/gen_indices.py
 
       - name: Commit archive changes
@@ -66,19 +77,20 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git commit -m "chore: refresh CVSS data and regenerate indices"
+          git pull --rebase --autostash
           git push
 
-      # Everything below needs a token the default GITHUB_TOKEN cannot provide,
-      # since that one is scoped to this repository. Without PROFILE_TOKEN the
-      # steps above still run and this part is skipped rather than failing.
-      - name: Check for profile token
+      # Everything below writes to other repositories, which the default
+      # GITHUB_TOKEN cannot do — it is scoped to this one. Without SYNC_TOKEN the
+      # steps above still run and these are skipped rather than failing.
+      - name: Check for sync token
         id: gate
         run: |
-          if [ -n "${{ secrets.PROFILE_TOKEN }}" ]; then
+          if [ -n "${{ secrets.SYNC_TOKEN }}" ]; then
             echo "ready=true" >> "$GITHUB_OUTPUT"
           else
             echo "ready=false" >> "$GITHUB_OUTPUT"
-            echo "::notice::PROFILE_TOKEN is not set, so the profile README was not updated. Create a fine-grained PAT with Contents:write on galletitaconpate/galletitaconpate and store it as the PROFILE_TOKEN secret."
+            echo "::notice::SYNC_TOKEN is not set, so the profile README and the website were not updated. Create one fine-grained PAT covering galletitaconpate/galletitaconpate and galletitaconpate/wolfhacking with Contents:write, and store it as the SYNC_TOKEN secret."
           fi
 
       - name: Check out profile repository
@@ -86,23 +98,51 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: galletitaconpate/galletitaconpate
-          token: ${{ secrets.PROFILE_TOKEN }}
+          token: ${{ secrets.SYNC_TOKEN }}
           path: profile
 
-      - name: Regenerate profile section
+      - name: Check out website repository
+        if: steps.gate.outputs.ready == 'true'
+        uses: actions/checkout@v4
+        with:
+          repository: galletitaconpate/wolfhacking
+          token: ${{ secrets.SYNC_TOKEN }}
+          path: site
+
+      - name: Regenerate profile README blocks
         if: steps.gate.outputs.ready == 'true'
         run: python3 archive/tools/gen_profile_section.py --write profile/README.md
+
+      - name: Regenerate website data
+        if: steps.gate.outputs.ready == 'true'
+        run: python3 archive/tools/gen_site_data.py --write site/site-data.js
 
       - name: Commit profile README
         if: steps.gate.outputs.ready == 'true'
         working-directory: profile
         run: |
-          if [ -z "$(git status --porcelain)" ]; then
+          git add -- README.md
+          if git diff --cached --quiet; then
             echo "profile README already up to date"
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add README.md
-          git commit -m "chore: sync exploit development section from verified-exploits"
+          git commit -m "chore: sync generated sections from verified-exploits"
+          git pull --rebase --autostash
+          git push
+
+      - name: Commit website data
+        if: steps.gate.outputs.ready == 'true'
+        working-directory: site
+        run: |
+          git add -- site-data.js
+          if git diff --cached --quiet; then
+            echo "website data already up to date"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "chore: sync site-data.js from verified-exploits"
+          git pull --rebase --autostash
           git push
