@@ -6,7 +6,7 @@ Every entry is a verified, reproduced exploit for a PUBLIC advisory, filed under
 come from any public namespace (CVE, GHSA, distro, vendor); when an advisory carries several ids it is
 filed under its CVE and the rest are listed as aliases.
 
-101 entries across 16 classes.
+102 entries across 16 classes.
 
 
 ## AuthBypass (8)
@@ -72,7 +72,7 @@ filed under its CVE and the rest are listed as aliases.
 
 - [Microsoft AD CS - CVE-2024-49019](./Microsoft%20AD%20CS/PrivEsc%20-%20CVE-2024-49019) - fixed in apply the November 2024 Windows Server updates; audit and remediate Schema V1 `EnrolleeSuppliesSubject`
 
-## RCE (51)
+## RCE (52)
 
 - [Adobe ColdFusion - CVE-2009-2265](./Adobe%20ColdFusion/RCE%20-%20CVE-2009-2265) - fixed in Upgrade to a patched ColdFusion release / apply the vendor hotfix; remove or restrict the FCKeditor connector
 - [Apache ActiveMQ - CVE-2023-46604](./Apache%20ActiveMQ/RCE%20-%20CVE-2023-46604) - fixed in 5.15.16
@@ -87,6 +87,7 @@ filed under its CVE and the rest are listed as aliases.
 - [GitPython - CVE-2022-24439](./GitPython/RCE%20-%20CVE-2022-24439) - fixed in 3.1.30
 - [GNU Bash - CVE-2014-6271](./GNU%20Bash/RCE%20-%20CVE-2014-6271)
 - [Grafana - CVE-2024-9264](./Grafana/RCE%20-%20CVE-2024-9264) - fixed in 11.0.6+security-01
+- [Handlebars.js - CVE-2026-33937](./Handlebars.js/RCE%20-%20CVE-2026-33937) - fixed in 4.7.9
 - [HFS (HttpFileServer) - CVE-2014-6287](./HFS%20(HttpFileServer)/RCE%20-%20CVE-2014-6287)
 - [ImageMagick - CVE-2024-41817](./ImageMagick/RCE%20-%20CVE-2024-41817) - fixed in 852a4e91b1cdb0c055a27dae956f130941e66ac0
 - [ISPConfig - CVE-2023-46818](./ISPConfig/RCE%20-%20CVE-2023-46818) - fixed in Upgrade to ISPConfig 3.2.11p1 or later

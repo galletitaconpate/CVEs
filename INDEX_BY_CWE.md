@@ -6,7 +6,7 @@ Every entry is a verified, reproduced exploit for a PUBLIC advisory, filed under
 come from any public namespace (CVE, GHSA, distro, vendor); when an advisory carries several ids it is
 filed under its CVE and the rest are listed as aliases.
 
-72 of 101 entries carry a CWE mapping across 44 distinct weaknesses.
+73 of 102 entries carry a CWE mapping across 44 distinct weaknesses.
 
 
 ## CWE-20 - Improper Input Validation
@@ -80,6 +80,7 @@ filed under its CVE and the rest are listed as aliases.
 
 - [GitPython - RCE - CVE-2022-24439 (CRITICAL)](./GitPython/RCE%20-%20CVE-2022-24439)
 - [Grafana - RCE - CVE-2024-9264 (CRITICAL)](./Grafana/RCE%20-%20CVE-2024-9264)
+- [Handlebars.js - RCE - CVE-2026-33937 (CRITICAL)](./Handlebars.js/RCE%20-%20CVE-2026-33937)
 - [HFS (HttpFileServer) - RCE - CVE-2014-6287 (CRITICAL)](./HFS%20(HttpFileServer)/RCE%20-%20CVE-2014-6287)
 - [ISPConfig - RCE - CVE-2023-46818 (HIGH)](./ISPConfig/RCE%20-%20CVE-2023-46818)
 - [js2py - RCE - CVE-2024-28397 (HIGH)](./js2py/RCE%20-%20CVE-2024-28397)

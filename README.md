@@ -147,6 +147,9 @@ When one advisory carries several identifiers, the entry is filed under its **CV
 - [RCE - CVE-2024-9264](./Grafana/RCE%20-%20CVE-2024-9264)
 - [PathTraversal - CVE-2021-43798](./Grafana/PathTraversal%20-%20CVE-2021-43798)
 
+### Handlebars.js
+- [RCE - CVE-2026-33937](./Handlebars.js/RCE%20-%20CVE-2026-33937)
+
 ### HFS (HttpFileServer)
 - [RCE - CVE-2014-6287](./HFS%20(HttpFileServer)/RCE%20-%20CVE-2014-6287)
 
