@@ -1,7 +1,8 @@
 name: sync profile section
 
-# Keeps the "exploit development" section of the profile README in step with
-# this archive. Runs when entries change, weekly to pick up CVSS scores that
+# Keeps the generated artifacts in step with the entries: the two indices and the
+# README listing in this repository, and the "exploit development" section of the
+# profile README. Runs when entries change, weekly to pick up CVSS scores that
 # upstream published after an entry was filed, and on demand.
 on:
   push:
@@ -32,17 +33,6 @@ jobs:
         with:
           path: archive
 
-      - name: Check out profile repository
-        uses: actions/checkout@v4
-        with:
-          repository: galletitaconpate/galletitaconpate
-          # A PAT is required: the default GITHUB_TOKEN is scoped to this
-          # repository and cannot push to the profile repository. Create a
-          # fine-grained token with Contents:write on galletitaconpate only,
-          # then store it as the PROFILE_TOKEN secret.
-          token: ${{ secrets.PROFILE_TOKEN }}
-          path: profile
-
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
@@ -54,27 +44,55 @@ jobs:
         if: github.event_name == 'schedule' || inputs.enrich
         env:
           # Raises the GitHub Advisory API rate limit from 60/h to 5000/h.
-          # Provided automatically by Actions; no stored secret involved.
+          # Supplied by Actions per run; no stored secret involved.
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: python3 archive/tools/enrich_metadata.py --delay 0.2
 
-      - name: Commit metadata changes
+      - name: Regenerate indices
+        # Must follow the backfill: the weakness index shows severity, so a
+        # score change upstream rewrites index content too.
+        run: python3 archive/tools/gen_indices.py
+
+      - name: Commit archive changes
         working-directory: archive
         run: |
           if [ -z "$(git status --porcelain)" ]; then
-            echo "no metadata changes"
+            echo "archive already up to date"
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -A '*metadata.json'
-          git commit -m "chore: backfill CVSS data from upstream databases"
+          git add -A
+          git commit -m "chore: refresh CVSS data and regenerate indices"
           git push
 
+      # Everything below needs a token the default GITHUB_TOKEN cannot provide,
+      # since that one is scoped to this repository. Without PROFILE_TOKEN the
+      # steps above still run and this part is skipped rather than failing.
+      - name: Check for profile token
+        id: gate
+        run: |
+          if [ -n "${{ secrets.PROFILE_TOKEN }}" ]; then
+            echo "ready=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "ready=false" >> "$GITHUB_OUTPUT"
+            echo "::notice::PROFILE_TOKEN is not set, so the profile README was not updated. Create a fine-grained PAT with Contents:write on galletitaconpate/galletitaconpate and store it as the PROFILE_TOKEN secret."
+          fi
+
+      - name: Check out profile repository
+        if: steps.gate.outputs.ready == 'true'
+        uses: actions/checkout@v4
+        with:
+          repository: galletitaconpate/galletitaconpate
+          token: ${{ secrets.PROFILE_TOKEN }}
+          path: profile
+
       - name: Regenerate profile section
+        if: steps.gate.outputs.ready == 'true'
         run: python3 archive/tools/gen_profile_section.py --write profile/README.md
 
       - name: Commit profile README
+        if: steps.gate.outputs.ready == 'true'
         working-directory: profile
         run: |
           if [ -z "$(git status --porcelain)" ]; then
