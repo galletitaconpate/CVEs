@@ -1,0 +1,56 @@
+"""CWE id to name mapping for the weakness index.
+
+Seeded from the names already present in INDEX_BY_CWE.md, plus the official MITRE
+names for the ids that were previously rendered as a bare number. Add an entry
+here when a new weakness shows up in an entry's metadata; an unknown id still
+renders, just without its name.
+"""
+
+CWE_NAMES = {
+    "CWE-20": "Improper Input Validation",
+    "CWE-22": "Path Traversal",
+    "CWE-23": "Relative Path Traversal",
+    "CWE-59": "Improper Link Resolution Before File Access ('Link Following')",
+    "CWE-73": "External Control of File Name or Path",
+    "CWE-74": "Improper Neutralization of Special Elements in Output ('Injection')",
+    "CWE-77": "Command Injection",
+    "CWE-78": "OS Command Injection",
+    "CWE-79": "Cross-site Scripting",
+    "CWE-80": "Improper Neutralization of Script-Related HTML Tags in a Web Page",
+    "CWE-89": "SQL Injection",
+    "CWE-94": "Improper Control of Generation of Code",
+    "CWE-95": "Improper Neutralization of Directives in Dynamically Evaluated Code ('Eval Injection')",
+    "CWE-98": "PHP Remote File Inclusion",
+    "CWE-116": "Improper Encoding or Escaping of Output",
+    "CWE-119": "Improper Restriction of Operations within Memory Buffer Bounds",
+    "CWE-120": "Buffer Copy without Checking Size of Input",
+    "CWE-144": "Improper Neutralization of Line Delimiters",
+    "CWE-158": "Improper Neutralization of Null Byte or NUL Character",
+    "CWE-200": "Exposure of Sensitive Information to an Unauthorized Actor",
+    "CWE-268": "Privilege Chaining",
+    "CWE-269": "Improper Privilege Management",
+    "CWE-282": "Improper Ownership Management",
+    "CWE-287": "Improper Authentication",
+    "CWE-288": "Authentication Bypass Using an Alternate Path or Channel",
+    "CWE-305": "Authentication Bypass by Primary Weakness",
+    "CWE-306": "Missing Authentication for Critical Function",
+    "CWE-311": "Missing Encryption of Sensitive Data",
+    "CWE-347": "Improper Verification of Cryptographic Signature",
+    "CWE-400": "Uncontrolled Resource Consumption",
+    "CWE-427": "Uncontrolled Search Path Element",
+    "CWE-434": "Unrestricted Upload of File with Dangerous Type",
+    "CWE-502": "Deserialization of Untrusted Data",
+    "CWE-601": "URL Redirection to Untrusted Site",
+    "CWE-665": "Improper Initialization",
+    "CWE-668": "Exposure of Resource to Wrong Sphere",
+    "CWE-732": "Incorrect Permission Assignment for Critical Resource",
+    "CWE-754": "Improper Check for Unusual or Exceptional Conditions",
+    "CWE-770": "Allocation of Resources Without Limits or Throttling",
+    "CWE-862": "Missing Authorization",
+    "CWE-863": "Incorrect Authorization",
+    "CWE-915": "Improperly Controlled Modification of Dynamically-Determined Object Attributes",
+    "CWE-918": "Server-Side Request Forgery",
+    "CWE-1327": "Binding to an Unrestricted IP Address",
+    "CWE-1336": "Server-Side Template Injection",
+    "CWE-1390": "Weak Authentication",
+}

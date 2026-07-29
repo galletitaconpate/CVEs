@@ -1,0 +1,88 @@
+name: sync profile section
+
+# Keeps the "exploit development" section of the profile README in step with
+# this archive. Runs when entries change, weekly to pick up CVSS scores that
+# upstream published after an entry was filed, and on demand.
+on:
+  push:
+    branches: [main]
+    paths:
+      - "**/metadata.json"
+      - "tools/**"
+      - ".github/workflows/sync-profile.yml"
+  schedule:
+    # Mondays 06:00 UTC.
+    - cron: "0 6 * * 1"
+  workflow_dispatch:
+    inputs:
+      enrich:
+        description: "Also fetch missing CVSS data from upstream databases"
+        type: boolean
+        default: true
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out archive
+        uses: actions/checkout@v4
+        with:
+          path: archive
+
+      - name: Check out profile repository
+        uses: actions/checkout@v4
+        with:
+          repository: galletitaconpate/galletitaconpate
+          # A PAT is required: the default GITHUB_TOKEN is scoped to this
+          # repository and cannot push to the profile repository. Create a
+          # fine-grained token with Contents:write on galletitaconpate only,
+          # then store it as the PROFILE_TOKEN secret.
+          token: ${{ secrets.PROFILE_TOKEN }}
+          path: profile
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Backfill missing CVSS data
+        # Skipped on push runs: a scheduled run is where late-published scores
+        # get picked up, and a push should not depend on third-party APIs.
+        if: github.event_name == 'schedule' || inputs.enrich
+        env:
+          # Raises the GitHub Advisory API rate limit from 60/h to 5000/h.
+          # Provided automatically by Actions; no stored secret involved.
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python3 archive/tools/enrich_metadata.py --delay 0.2
+
+      - name: Commit metadata changes
+        working-directory: archive
+        run: |
+          if [ -z "$(git status --porcelain)" ]; then
+            echo "no metadata changes"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A '*metadata.json'
+          git commit -m "chore: backfill CVSS data from upstream databases"
+          git push
+
+      - name: Regenerate profile section
+        run: python3 archive/tools/gen_profile_section.py --write profile/README.md
+
+      - name: Commit profile README
+        working-directory: profile
+        run: |
+          if [ -z "$(git status --porcelain)" ]; then
+            echo "profile README already up to date"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add README.md
+          git commit -m "chore: sync exploit development section from verified-exploits"
+          git push

@@ -1,0 +1,37 @@
+{
+  "id": "ADV190005",
+  "aliases": [
+    "CVE-2019-9515"
+  ],
+  "namespace": "MSRC",
+  "product": "HTTP/2",
+  "ecosystem": "protocol",
+  "package": "http/2",
+  "class": "DoS",
+  "cwe": [
+    "CWE-400",
+    "CWE-770"
+  ],
+  "severity": "HIGH",
+  "cvss": {
+    "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+    "score": 7.5,
+    "version": "3.1"
+  },
+  "affected": "HTTP/2 implementations without a SETTINGS frame rate limit (IIS, and others per CVE-2019-9515)",
+  "fixed": "vendor specific",
+  "summary": "HTTP/2 SETTINGS flood: a stream of SETTINGS frames forces the server to queue an ACK for each one, growing unbounded output buffers until resources are exhausted",
+  "refs": [
+    "https://msrc.microsoft.com/update-guide/vulnerability/ADV190005",
+    "https://github.com/Netflix/security-bulletins/blob/master/advisories/third-party/2019-002.md",
+    "https://github.com/advisories/GHSA-qw4h-3xjj-84cc"
+  ],
+  "poc": {
+    "type": "script",
+    "files": [
+      "adv190005.py"
+    ]
+  },
+  "verified": true,
+  "metadata_source": "manual+github"
+}

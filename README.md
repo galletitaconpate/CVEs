@@ -41,16 +41,17 @@ When one advisory carries several identifiers, the entry is filed under its **CV
 - **[INDEX_BY_CLASS.md](./INDEX_BY_CLASS.md)** - grouped by vulnerability class (RCE, SQLi, AuthBypass, LPE, ...).
 - **By product** - the listing below, alphabetical.
 
+All three are generated from the `metadata.json` files, which are the source of truth. See **[tools/](./tools)** to regenerate them, and to backfill severity and CVSS data that upstream databases published after an entry was filed.
+
 ## Vulnerabilities by Product
+
+<!-- INDEX:START -->
 
 ### Adminer
 - [FileRead - CVE-2020-35572](./Adminer/FileRead%20-%20CVE-2020-35572)
 
 ### Adobe ColdFusion
 - [RCE - CVE-2009-2265](./Adobe%20ColdFusion/RCE%20-%20CVE-2009-2265)
-
-### ADV190005
-- [HTTP/2 Settings Flood - adv190005.py](./ADV190005/adv190005.py)
 
 ### aiohttp
 - [PathTraversal - CVE-2024-23334](./aiohttp/PathTraversal%20-%20CVE-2024-23334)
@@ -97,9 +98,6 @@ When one advisory carries several identifiers, the entry is filed under its **CV
 ### CUPS
 - [RCE - CVE-2024-47176](./CUPS/RCE%20-%20CVE-2024-47176)
 
-### CVE-2023-44487
-- [HTTP/2 Rapid Reset - CVE-2023-44487.py](./CVE-2023-44487/CVE-2023-44487.py)
-
 ### Docker Desktop
 - [SSRF - CVE-2025-9074](./Docker%20Desktop/SSRF%20-%20CVE-2025-9074)
 
@@ -122,8 +120,8 @@ When one advisory carries several identifiers, the entry is filed under its **CV
 - [LFI - CVE-2025-59341](./esm.sh/LFI%20-%20CVE-2025-59341)
 
 ### FreePBX
-- [SQLi - CVE-2025-57819](./FreePBX/SQLi%20-%20CVE-2025-57819)
 - [PathTraversal - CVE-2025-61678](./FreePBX/PathTraversal%20-%20CVE-2025-61678)
+- [SQLi - CVE-2025-57819](./FreePBX/SQLi%20-%20CVE-2025-57819)
 
 ### Froxlor
 - [RXSS - CVE-2024-34070](./Froxlor/RXSS%20-%20CVE-2024-34070)
@@ -147,14 +145,18 @@ When one advisory carries several identifiers, the entry is filed under its **CV
 - [RCE - CVE-2014-6271](./GNU%20Bash/RCE%20-%20CVE-2014-6271)
 
 ### Grafana
-- [RCE - CVE-2024-9264](./Grafana/RCE%20-%20CVE-2024-9264)
 - [PathTraversal - CVE-2021-43798](./Grafana/PathTraversal%20-%20CVE-2021-43798)
+- [RCE - CVE-2024-9264](./Grafana/RCE%20-%20CVE-2024-9264)
 
 ### Handlebars.js
 - [RCE - CVE-2026-33937](./Handlebars.js/RCE%20-%20CVE-2026-33937)
 
 ### HFS (HttpFileServer)
-- [RCE - CVE-2014-6287](./HFS%20(HttpFileServer)/RCE%20-%20CVE-2014-6287)
+- [RCE - CVE-2014-6287](./HFS%20%28HttpFileServer%29/RCE%20-%20CVE-2014-6287)
+
+### HTTP/2
+- [DoS - ADV190005](./ADV190005)
+- [DoS - CVE-2023-44487](./CVE-2023-44487)
 
 ### ImageMagick
 - [RCE - CVE-2024-41817](./ImageMagick/RCE%20-%20CVE-2024-41817)
@@ -192,10 +194,10 @@ When one advisory carries several identifiers, the entry is filed under its **CV
 - [RCE - CVE-2021-44967](./LimeSurvey/RCE%20-%20CVE-2021-44967)
 
 ### Linux Kernel
-- [LPE - CVE-2017-16995](./Linux%20Kernel/LPE%20-%20CVE-2017-16995)
 - [CWE665 - CVE-2022-0847](./Linux%20Kernel/CWE665%20-%20CVE-2022-0847)
-- [LPE - CVE-2023-0386](./Linux%20Kernel/LPE%20-%20CVE-2023-0386)
+- [LPE - CVE-2017-16995](./Linux%20Kernel/LPE%20-%20CVE-2017-16995)
 - [LPE - CVE-2021-3493](./Linux%20Kernel/LPE%20-%20CVE-2021-3493)
+- [LPE - CVE-2023-0386](./Linux%20Kernel/LPE%20-%20CVE-2023-0386)
 
 ### Magento
 - [RCE - CVE-2015-1398](./Magento/RCE%20-%20CVE-2015-1398)
@@ -244,7 +246,7 @@ When one advisory carries several identifiers, the entry is filed under its **CV
 - [RCE - CVE-2015-6967](./Nibbleblog/RCE%20-%20CVE-2015-6967)
 
 ### Nostromo (nhttpd)
-- [RCE - CVE-2019-16278](./Nostromo%20(nhttpd)/RCE%20-%20CVE-2019-16278)
+- [RCE - CVE-2019-16278](./Nostromo%20%28nhttpd%29/RCE%20-%20CVE-2019-16278)
 
 ### OpenNetAdmin
 - [RCE - CVE-2019-25065](./OpenNetAdmin/RCE%20-%20CVE-2019-25065)
@@ -261,11 +263,11 @@ When one advisory carries several identifiers, the entry is filed under its **CV
 ### Paessler PRTG Network Monitor
 - [RCE - CVE-2018-9276](./Paessler%20PRTG%20Network%20Monitor/RCE%20-%20CVE-2018-9276)
 
-### PDF24 Creator
-- [LPE - CVE-2023-49147](./PDF24%20Creator/LPE%20-%20CVE-2023-49147)
-
 ### PDF.js
 - [RCE - CVE-2024-4367](./PDF.js/RCE%20-%20CVE-2024-4367)
+
+### PDF24 Creator
+- [LPE - CVE-2023-49147](./PDF24%20Creator/LPE%20-%20CVE-2023-49147)
 
 ### pdfminer.six
 - [RCE - CVE-2025-64512](./pdfminer.six/RCE%20-%20CVE-2025-64512)
@@ -289,8 +291,8 @@ When one advisory carries several identifiers, the entry is filed under its **CV
 - [RCE - CVE-2025-49113](./Roundcube%20Webmail/RCE%20-%20CVE-2025-49113)
 
 ### Samba
-- [RCE - CVE-2026-4480](./Samba/RCE%20-%20CVE-2026-4480)
 - [RCE - CVE-2007-2447](./Samba/RCE%20-%20CVE-2007-2447)
+- [RCE - CVE-2026-4480](./Samba/RCE%20-%20CVE-2026-4480)
 
 ### snapd
 - [LPE - CVE-2026-3888](./snapd/LPE%20-%20CVE-2026-3888)
@@ -299,8 +301,8 @@ When one advisory carries several identifiers, the entry is filed under its **CV
 - [SSTI - CVE-2022-0944](./SQLPad/SSTI%20-%20CVE-2022-0944)
 
 ### sudo
-- [LPE - CVE-2025-32462](./sudo/LPE%20-%20CVE-2025-32462)
 - [AuthBypass - CVE-2019-14287](./sudo/AuthBypass%20-%20CVE-2019-14287)
+- [LPE - CVE-2025-32462](./sudo/LPE%20-%20CVE-2025-32462)
 
 ### TensorFlow
 - [RCE - CVE-2024-3660](./TensorFlow/RCE%20-%20CVE-2024-3660)
@@ -335,6 +337,8 @@ When one advisory carries several identifiers, the entry is filed under its **CV
 
 ### ZoneMinder
 - [SQLi - CVE-2024-51482](./ZoneMinder/SQLi%20-%20CVE-2024-51482)
+
+> The following entries predate the `<Product>/<CLASS> - <ID>` layout and are kept at their original paths on purpose, since renaming them would break inbound links: [`ADV190005`](./ADV190005), [`CVE-2023-44487`](./CVE-2023-44487).
 
 <!-- INDEX:END -->
 
