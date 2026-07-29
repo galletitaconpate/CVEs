@@ -56,13 +56,15 @@ jobs:
       - name: Commit archive changes
         working-directory: archive
         run: |
-          if [ -z "$(git status --porcelain)" ]; then
+          # Restricted to the generated artifacts on purpose. An unrestricted
+          # `git add -A` here committed a stray __pycache__ file on the first run.
+          git add -- '*metadata.json' README.md INDEX_BY_CLASS.md INDEX_BY_CWE.md
+          if git diff --cached --quiet; then
             echo "archive already up to date"
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -A
           git commit -m "chore: refresh CVSS data and regenerate indices"
           git push
 
