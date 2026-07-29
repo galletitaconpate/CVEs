@@ -131,6 +131,9 @@ When one advisory carries several identifiers, the entry is filed under its **CV
 ### Ghost CMS
 - [PathTraversal - CVE-2023-40028](./Ghost%20CMS/PathTraversal%20-%20CVE-2023-40028)
 
+### Gitea
+- [AuthBypass - CVE-2026-26231](./Gitea/AuthBypass%20-%20CVE-2026-26231)
+
 ### GitPython
 - [RCE - CVE-2022-24439](./GitPython/RCE%20-%20CVE-2022-24439)
 

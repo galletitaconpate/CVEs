@@ -6,13 +6,14 @@ Every entry is a verified, reproduced exploit for a PUBLIC advisory, filed under
 come from any public namespace (CVE, GHSA, distro, vendor); when an advisory carries several ids it is
 filed under its CVE and the rest are listed as aliases.
 
-102 entries across 16 classes.
+103 entries across 16 classes.
 
 
-## AuthBypass (8)
+## AuthBypass (9)
 
 - [Camaleon CMS - CVE-2025-2304](./Camaleon%20CMS/AuthBypass%20-%20CVE-2025-2304) - fixed in 2.9.1
 - [CrushFTP - CVE-2025-31161](./CrushFTP/AuthBypass%20-%20CVE-2025-31161) - fixed in upgrade to CrushFTP 10.8.4 / 11.3.1 (or later)
+- [Gitea - CVE-2026-26231](./Gitea/AuthBypass%20-%20CVE-2026-26231) - fixed in 1.26.2
 - [JetBrains TeamCity - CVE-2023-42793](./JetBrains%20TeamCity/AuthBypass%20-%20CVE-2023-42793) - fixed in Upgrade to 2023.05.4 or later
 - [Joomla - CVE-2023-23752](./Joomla/AuthBypass%20-%20CVE-2023-23752) - fixed in 5897df8ee39056fbd37624eeeeff1b81e24d84ef
 - [Microsoft Windows File Explorer - CVE-2025-24071](./Microsoft%20Windows%20File%20Explorer/AuthBypass%20-%20CVE-2025-24071) - fixed in Microsoft March 2025 patch (Explorer no longer auto-resolves the library location)

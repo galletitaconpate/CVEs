@@ -6,7 +6,7 @@ Every entry is a verified, reproduced exploit for a PUBLIC advisory, filed under
 come from any public namespace (CVE, GHSA, distro, vendor); when an advisory carries several ids it is
 filed under its CVE and the rest are listed as aliases.
 
-73 of 102 entries carry a CWE mapping across 44 distinct weaknesses.
+74 of 103 entries carry a CWE mapping across 44 distinct weaknesses.
 
 
 ## CWE-20 - Improper Input Validation
@@ -209,6 +209,7 @@ filed under its CVE and the rest are listed as aliases.
 
 ## CWE-863 - Incorrect Authorization
 
+- [Gitea - AuthBypass - CVE-2026-26231 (HIGH)](./Gitea/AuthBypass%20-%20CVE-2026-26231)
 - [sudo - LPE - CVE-2025-32462](./sudo/LPE%20-%20CVE-2025-32462)
 
 ## CWE-915 - Improperly Controlled Modification of Dynamically-Determined Object Attributes
