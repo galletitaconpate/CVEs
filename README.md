@@ -1,8 +1,14 @@
-# CVE Repository
+# Verified Exploits
 
-*A curated archive of proof-of-concept exploits and technical write-ups for analyzed CVEs, organized by affected product.*
+*Reproduced exploits and technical write-ups for public security advisories, organized by affected product and indexed by weakness.*
 
-This repository documents vulnerabilities (CVEs) that have been researched and reproduced across a range of products. Each entry contains a technical write-up and, where applicable, a proof-of-concept (PoC) script. All material is provided for educational purposes and authorized security research only. Entries are organized by product and listed alphabetically so a specific exploit is easy to locate.
+Every entry here is an exploit that was actually run and reproduced against the affected product. Nothing in this repository is a copied, theoretical or untested proof-of-concept.
+
+Entries cover advisories from any public namespace, not only CVE. GitHub Security Advisories (GHSA), language ecosystem databases (PYSEC, GO, RUSTSEC), distribution errata, and vendor or broker advisories (ZDI, Exploit-DB) all belong here: whether a bug received a CVE depends on which body assigned the identifier, not on how exploitable the bug is. Plenty of GHSAs never get a CVE at all, and plenty of CVEs are published by GitHub weeks before NVD lists them.
+
+Only vulnerabilities that are **already public and already patched** are archived. Nothing unpatched, embargoed or withdrawn goes in here.
+
+Each entry carries a technical write-up, a machine-readable `metadata.json`, and, where applicable, a proof-of-concept script.
 
 ## Disclaimer
 
@@ -14,17 +20,26 @@ The author provides this material "as is", without warranty of any kind, and **a
 
 ## Repository Structure
 
-Each vulnerability lives in its own folder, following the convention `<Product>/<CLASS> - <CVE-ID>/`: a `README.md` write-up plus an optional proof-of-concept script (not always present).
+Entries are grouped by PRODUCT. One product folder holds entries from different advisory namespaces side by side, because the namespace names the identifier, not the bug.
 
 ```
-<Product>/<CLASS> - <CVE-ID>/
-|-- README.md      # technical write-up and reproduction steps
-`-- <poc>          # optional proof-of-concept script (not always present)
+<Product>/<CLASS> - <ID>/
+|-- README.md       # technical write-up and reproduction steps
+|-- metadata.json   # machine-readable record: aliases, CWE, CVSS, affected and fixed versions
+`-- <poc>           # optional proof-of-concept script (not always present)
 ```
 
-- `<Product>` - the affected product (e.g. `Linux Kernel`, `Keycloak`).
-- `<CLASS>` - the vulnerability class (e.g. `RCE`, `SQLi`, `LPE`, `PathTraversal`, `CWE###`).
-- `<CVE-ID>` - the CVE identifier, or an advisory / GHSA id where no CVE was assigned.
+- `<Product>` - the affected product (e.g. `Linux Kernel`, `Keycloak`, `Gitea`).
+- `<CLASS>` - the vulnerability class (e.g. `RCE`, `SQLi`, `LPE`, `PathTraversal`, `AuthBypass`, `CWE###`).
+- `<ID>` - the advisory identifier from any public namespace (`CVE-...`, `GHSA-...`, `ZDI-...`, `EDB-...`).
+
+When one advisory carries several identifiers, the entry is filed under its **CVE** and every other id is recorded as an alias in `metadata.json`. A GHSA that already has a CVE alias is therefore filed under the CVE even while NVD still shows nothing for it, so there is one entry per vulnerability instead of one per identifier.
+
+## Indices
+
+- **[INDEX_BY_CWE.md](./INDEX_BY_CWE.md)** - grouped by weakness (CWE). Read this one to map a class of weakness to working proof rather than to look up a single identifier.
+- **[INDEX_BY_CLASS.md](./INDEX_BY_CLASS.md)** - grouped by vulnerability class (RCE, SQLi, AuthBypass, LPE, ...).
+- **By product** - the listing below, alphabetical.
 
 ## Vulnerabilities by Product
 

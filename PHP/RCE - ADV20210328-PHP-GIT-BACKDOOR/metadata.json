@@ -1,0 +1,24 @@
+{
+  "id": "ADV20210328-PHP-GIT-BACKDOOR",
+  "aliases": [],
+  "namespace": "ADHOC",
+  "product": "PHP",
+  "ecosystem": "",
+  "package": "",
+  "class": "RCE",
+  "cwe": [],
+  "severity": "",
+  "cvss": null,
+  "affected": "",
+  "fixed": "the commits were reverted upstream within hours; never run a `-dev` PHP build in production. Upgrade to any released (non `-dev`) PHP version",
+  "summary": "PHP 8.1.0-dev - Backdoored release (git.php.net supply-chain) - unauth RCE via User-Agentt header",
+  "refs": [
+    "https://news-web.php.net/php.internals/113838"
+  ],
+  "poc": {
+    "type": "readme-only",
+    "files": []
+  },
+  "verified": true,
+  "metadata_source": "none"
+}
