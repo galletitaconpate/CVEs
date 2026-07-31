@@ -6,7 +6,7 @@ Every entry is a verified, reproduced exploit for a PUBLIC advisory, filed under
 come from any public namespace (CVE, GHSA, distro, vendor); when an advisory carries several ids it is
 filed under its CVE and the rest are listed as aliases.
 
-111 entries across 17 classes.
+113 entries across 17 classes.
 
 
 ## AuthBypass (9)
@@ -50,7 +50,7 @@ filed under its CVE and the rest are listed as aliases.
 - [esm.sh - CVE-2025-59341](./esm.sh/LFI%20-%20CVE-2025-59341) - fixed in upgrade to v137 (or a build after the path-sanitization patch)
 - [PrivateBin - CVE-2025-64714](./PrivateBin/LFI%20-%20CVE-2025-64714) - fixed in 2.0.3
 
-## LPE (15)
+## LPE (16)
 
 - [apport - CVE-2023-1326](./apport/LPE%20-%20CVE-2023-1326) - fixed in e5f78cc89f1f5888b6a56b785dddcb0364c48ecb
 - [below - CVE-2025-27591](./below/LPE%20-%20CVE-2025-27591) - fixed in 0.9.0
@@ -61,6 +61,7 @@ filed under its CVE and the rest are listed as aliases.
 - [Linux Kernel - CVE-2023-0386](./Linux%20Kernel/LPE%20-%20CVE-2023-0386)
 - [Microsoft Windows AFD - CVE-2011-1249](./Microsoft%20Windows%20AFD/LPE%20-%20CVE-2011-1249)
 - [Microsoft Windows Secondary Logon - CVE-2016-0099](./Microsoft%20Windows%20Secondary%20Logon/LPE%20-%20CVE-2016-0099)
+- [Moby - CVE-2021-41091](./Moby/LPE%20-%20CVE-2021-41091) - fixed in 20.10.9
 - [needrestart - CVE-2024-48990](./needrestart/LPE%20-%20CVE-2024-48990) - fixed in 539233750b59ed3b39cb763f5ad43243c2eaf562
 - [PDF24 Creator - CVE-2023-49147](./PDF24%20Creator/LPE%20-%20CVE-2023-49147)
 - [polkit - CVE-2021-4034](./polkit/LPE%20-%20CVE-2021-4034) - fixed in 827b0ddac5b1ef00a47fca4526fcf057bee5f1db
@@ -82,12 +83,13 @@ filed under its CVE and the rest are listed as aliases.
 
 - [Microsoft AD CS - CVE-2024-49019](./Microsoft%20AD%20CS/PrivEsc%20-%20CVE-2024-49019) - fixed in apply the November 2024 Windows Server updates; audit and remediate Schema V1 `EnrolleeSuppliesSubject`
 
-## RCE (53)
+## RCE (54)
 
 - [Adobe ColdFusion - CVE-2009-2265](./Adobe%20ColdFusion/RCE%20-%20CVE-2009-2265) - fixed in Upgrade to a patched ColdFusion release / apply the vendor hotfix; remove or restrict the FCKeditor connector
 - [Apache ActiveMQ - CVE-2023-46604](./Apache%20ActiveMQ/RCE%20-%20CVE-2023-46604) - fixed in 5.15.16
 - [Apache OFBiz - CVE-2023-51467](./Apache%20OFBiz/RCE%20-%20CVE-2023-51467) - fixed in upgrade to Apache OFBiz 18.12.11+ (the XML-RPC component was removed and the auth bypass patched)
 - [Bludit - CVE-2019-16113](./Bludit/RCE%20-%20CVE-2019-16113) - fixed in upgrade to Bludit 3.10.0 or later (image type is validated before the move)
+- [Cacti - CVE-2022-46169](./Cacti/RCE%20-%20CVE-2022-46169) - fixed in aa48e25d81fef743021f50f9254ebbbd626a416c
 - [Cacti - CVE-2025-24367](./Cacti/RCE%20-%20CVE-2025-24367) - fixed in 34cef6458ed6a41ac458b2acaaa77fbe79c6731c
 - [Chamilo LMS - CVE-2023-4220](./Chamilo%20LMS/RCE%20-%20CVE-2023-4220) - fixed in 3b487a55076fb06f96809b790a35dcdd42f8ec49
 - [CUPS - CVE-2024-47176](./CUPS/RCE%20-%20CVE-2024-47176) - fixed in 1debe6b140c37e0aa928559add4abcc95ce54aa2

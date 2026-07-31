@@ -78,6 +78,7 @@ All three are generated from the `metadata.json` files, which are the source of 
 - [RCE - CVE-2019-16113](./Bludit/RCE%20-%20CVE-2019-16113)
 
 ### Cacti
+- [RCE - CVE-2022-46169](./Cacti/RCE%20-%20CVE-2022-46169)
 - [RCE - CVE-2025-24367](./Cacti/RCE%20-%20CVE-2025-24367)
 
 ### Camaleon CMS
@@ -236,6 +237,9 @@ All three are generated from the `metadata.json` files, which are the source of 
 
 ### Microsoft Windows SMBv1
 - [RCE - CVE-2017-0144](./Microsoft%20Windows%20SMBv1/RCE%20-%20CVE-2017-0144)
+
+### Moby
+- [LPE - CVE-2021-41091](./Moby/LPE%20-%20CVE-2021-41091)
 
 ### motionEye
 - [RCE - CVE-2025-60787](./motionEye/RCE%20-%20CVE-2025-60787)

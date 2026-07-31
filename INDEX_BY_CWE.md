@@ -6,7 +6,7 @@ Every entry is a verified, reproduced exploit for a PUBLIC advisory, filed under
 come from any public namespace (CVE, GHSA, distro, vendor); when an advisory carries several ids it is
 filed under its CVE and the rest are listed as aliases.
 
-82 of 111 entries carry a CWE mapping across 47 distinct weaknesses.
+84 of 113 entries carry a CWE mapping across 48 distinct weaknesses.
 
 
 ## CWE-20 - Improper Input Validation
@@ -43,6 +43,7 @@ filed under its CVE and the rest are listed as aliases.
 
 ## CWE-74 - Improper Neutralization of Special Elements in Output ('Injection')
 
+- [Cacti - RCE - CVE-2022-46169](./Cacti/RCE%20-%20CVE-2022-46169)
 - [vm2 - RCE - CVE-2023-30547 (CRITICAL)](./vm2/RCE%20-%20CVE-2023-30547)
 
 ## CWE-77 - Command Injection
@@ -137,6 +138,10 @@ filed under its CVE and the rest are listed as aliases.
 - [apport - LPE - CVE-2023-1326 (HIGH)](./apport/LPE%20-%20CVE-2023-1326)
 - [systemd - LPE - CVE-2023-26604](./systemd/LPE%20-%20CVE-2023-26604)
 
+## CWE-281
+
+- [Moby - LPE - CVE-2021-41091 (MEDIUM)](./Moby/LPE%20-%20CVE-2021-41091)
+
 ## CWE-282 - Improper Ownership Management
 
 - [Linux Kernel - LPE - CVE-2023-0386 (HIGH)](./Linux%20Kernel/LPE%20-%20CVE-2023-0386)
@@ -211,6 +216,7 @@ filed under its CVE and the rest are listed as aliases.
 ## CWE-732 - Incorrect Permission Assignment for Critical Resource
 
 - [below - LPE - CVE-2025-27591 (HIGH)](./below/LPE%20-%20CVE-2025-27591)
+- [Moby - LPE - CVE-2021-41091 (MEDIUM)](./Moby/LPE%20-%20CVE-2021-41091)
 
 ## CWE-754 - Improper Check for Unusual or Exceptional Conditions
 
