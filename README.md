@@ -71,6 +71,9 @@ All three are generated from the `metadata.json` files, which are the source of 
 ### below
 - [LPE - CVE-2025-27591](./below/LPE%20-%20CVE-2025-27591)
 
+### binwalk
+- [PathTraversal - CVE-2022-4510](./binwalk/PathTraversal%20-%20CVE-2022-4510)
+
 ### Bludit
 - [RCE - CVE-2019-16113](./Bludit/RCE%20-%20CVE-2019-16113)
 
