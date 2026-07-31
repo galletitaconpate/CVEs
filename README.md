@@ -311,6 +311,9 @@ All three are generated from the `metadata.json` files, which are the source of 
 - [RCE - CVE-2007-2447](./Samba/RCE%20-%20CVE-2007-2447)
 - [RCE - CVE-2026-4480](./Samba/RCE%20-%20CVE-2026-4480)
 
+### Searchor
+- [RCE - CVE-2023-43364](./Searchor/RCE%20-%20CVE-2023-43364)
+
 ### snapd
 - [LPE - CVE-2026-3888](./snapd/LPE%20-%20CVE-2026-3888)
 
