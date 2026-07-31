@@ -333,6 +333,9 @@ All three are generated from the `metadata.json` files, which are the source of 
 ### TensorFlow
 - [RCE - CVE-2024-3660](./TensorFlow/RCE%20-%20CVE-2024-3660)
 
+### Tiny File Manager
+- [PathTraversal - CVE-2021-45010](./Tiny%20File%20Manager/PathTraversal%20-%20CVE-2021-45010)
+
 ### UnrealIRCd
 - [RCE - CVE-2010-2075](./UnrealIRCd/RCE%20-%20CVE-2010-2075)
 

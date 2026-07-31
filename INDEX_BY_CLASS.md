@@ -6,7 +6,7 @@ Every entry is a verified, reproduced exploit for a PUBLIC advisory, filed under
 come from any public namespace (CVE, GHSA, distro, vendor); when an advisory carries several ids it is
 filed under its CVE and the rest are listed as aliases.
 
-115 entries across 17 classes.
+116 entries across 17 classes.
 
 
 ## AuthBypass (9)
@@ -69,7 +69,7 @@ filed under its CVE and the rest are listed as aliases.
 - [sudo - CVE-2025-32462](./sudo/LPE%20-%20CVE-2025-32462) - fixed in 84e7ca6752a2d3a32452adee177d1f57421dd814
 - [systemd - CVE-2023-26604](./systemd/LPE%20-%20CVE-2023-26604) - fixed in systemd 247
 
-## PathTraversal (7)
+## PathTraversal (8)
 
 - [aiohttp - CVE-2024-23334](./aiohttp/PathTraversal%20-%20CVE-2024-23334) - fixed in 3.9.2
 - [Apache Struts2 - CVE-2024-53677](./Apache%20Struts2/PathTraversal%20-%20CVE-2024-53677) - fixed in 6.4.0
@@ -78,6 +78,7 @@ filed under its CVE and the rest are listed as aliases.
 - [FreePBX - CVE-2025-61678](./FreePBX/PathTraversal%20-%20CVE-2025-61678) - fixed in Endpoint Manager 16.0.92
 - [Ghost CMS - CVE-2023-40028](./Ghost%20CMS/PathTraversal%20-%20CVE-2023-40028) - fixed in 5.59.1
 - [Grafana - CVE-2021-43798](./Grafana/PathTraversal%20-%20CVE-2021-43798) - fixed in 8.3.1
+- [Tiny File Manager - CVE-2021-45010](./Tiny%20File%20Manager/PathTraversal%20-%20CVE-2021-45010) - fixed in 2.4.7
 
 ## PrivEsc (1)
 
