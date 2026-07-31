@@ -6,7 +6,7 @@ Every entry is a verified, reproduced exploit for a PUBLIC advisory, filed under
 come from any public namespace (CVE, GHSA, distro, vendor); when an advisory carries several ids it is
 filed under its CVE and the rest are listed as aliases.
 
-81 of 110 entries carry a CWE mapping across 47 distinct weaknesses.
+82 of 111 entries carry a CWE mapping across 47 distinct weaknesses.
 
 
 ## CWE-20 - Improper Input Validation
@@ -87,6 +87,7 @@ filed under its CVE and the rest are listed as aliases.
 - [js2py - RCE - CVE-2024-28397 (HIGH)](./js2py/RCE%20-%20CVE-2024-28397)
 - [Langflow - RCE - CVE-2026-33017 (CRITICAL)](./Langflow/RCE%20-%20CVE-2026-33017)
 - [Microsoft Windows Server Service - RCE - CVE-2008-4250 (CRITICAL)](./Microsoft%20Windows%20Server%20Service/RCE%20-%20CVE-2008-4250)
+- [pyLoad - RCE - CVE-2023-0297 (CRITICAL)](./pyLoad/RCE%20-%20CVE-2023-0297)
 - [TensorFlow - RCE - CVE-2024-3660 (CRITICAL)](./TensorFlow/RCE%20-%20CVE-2024-3660)
 - [XWiki Platform - RCE - CVE-2025-24893 (CRITICAL)](./XWiki%20Platform/RCE%20-%20CVE-2025-24893)
 

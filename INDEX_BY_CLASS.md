@@ -6,7 +6,7 @@ Every entry is a verified, reproduced exploit for a PUBLIC advisory, filed under
 come from any public namespace (CVE, GHSA, distro, vendor); when an advisory carries several ids it is
 filed under its CVE and the rest are listed as aliases.
 
-110 entries across 17 classes.
+111 entries across 17 classes.
 
 
 ## AuthBypass (9)
@@ -82,7 +82,7 @@ filed under its CVE and the rest are listed as aliases.
 
 - [Microsoft AD CS - CVE-2024-49019](./Microsoft%20AD%20CS/PrivEsc%20-%20CVE-2024-49019) - fixed in apply the November 2024 Windows Server updates; audit and remediate Schema V1 `EnrolleeSuppliesSubject`
 
-## RCE (52)
+## RCE (53)
 
 - [Adobe ColdFusion - CVE-2009-2265](./Adobe%20ColdFusion/RCE%20-%20CVE-2009-2265) - fixed in Upgrade to a patched ColdFusion release / apply the vendor hotfix; remove or restrict the FCKeditor connector
 - [Apache ActiveMQ - CVE-2023-46604](./Apache%20ActiveMQ/RCE%20-%20CVE-2023-46604) - fixed in 5.15.16
@@ -123,6 +123,7 @@ filed under its CVE and the rest are listed as aliases.
 - [pdfminer.six - CVE-2025-64512](./pdfminer.six/RCE%20-%20CVE-2025-64512) - fixed in 20251107
 - [PHP - ADV20210328-PHP-GIT-BACKDOOR](./PHP/RCE%20-%20ADV20210328-PHP-GIT-BACKDOOR) - fixed in the commits were reverted upstream within hours; never run a `-dev` PHP build in production. Upgrade to any released (non `-dev`) PHP version
 - [Pluck - CVE-2023-50564](./Pluck/RCE%20-%20CVE-2023-50564) - fixed in No fixed release from the vendor at disclosure; restrict/patch the module upload, place `data/modules/` outside the web root, or migrate off Pluck 4.7.18
+- [pyLoad - CVE-2023-0297](./pyLoad/RCE%20-%20CVE-2023-0297) - fixed in 0.5.0b3.dev31
 - [pymatgen - CVE-2024-23346](./pymatgen/RCE%20-%20CVE-2024-23346) - fixed in 2024.2.20
 - [Roundcube Webmail - CVE-2025-49113](./Roundcube%20Webmail/RCE%20-%20CVE-2025-49113) - fixed in 1.5.10
 - [Samba - CVE-2007-2447](./Samba/RCE%20-%20CVE-2007-2447) - fixed in upgrade to Samba 3.0.25rc3 or later (or remove the `username map script` option)

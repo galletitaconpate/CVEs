@@ -291,6 +291,9 @@ All three are generated from the `metadata.json` files, which are the source of 
 ### PrivateBin
 - [LFI - CVE-2025-64714](./PrivateBin/LFI%20-%20CVE-2025-64714)
 
+### pyLoad
+- [RCE - CVE-2023-0297](./pyLoad/RCE%20-%20CVE-2023-0297)
+
 ### pymatgen
 - [RCE - CVE-2024-23346](./pymatgen/RCE%20-%20CVE-2024-23346)
 
