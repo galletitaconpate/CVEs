@@ -159,6 +159,7 @@ All three are generated from the `metadata.json` files, which are the source of 
 - [DoS - CVE-2023-44487](./CVE-2023-44487)
 
 ### ImageMagick
+- [FileRead - CVE-2022-44268](./ImageMagick/FileRead%20-%20CVE-2022-44268)
 - [RCE - CVE-2024-41817](./ImageMagick/RCE%20-%20CVE-2024-41817)
 
 ### ISPConfig
