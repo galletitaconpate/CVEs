@@ -176,6 +176,9 @@ All three are generated from the `metadata.json` files, which are the source of 
 ### js2py
 - [RCE - CVE-2024-28397](./js2py/RCE%20-%20CVE-2024-28397)
 
+### KeePass
+- [InfoDisclosure - CVE-2023-32784](./KeePass/InfoDisclosure%20-%20CVE-2023-32784)
+
 ### Keycloak
 - [CWE200 - CVE-2020-27838](./Keycloak/CWE200%20-%20CVE-2020-27838)
 - [RXSS - CVE-2021-20323](./Keycloak/RXSS%20-%20CVE-2021-20323)
