@@ -290,6 +290,9 @@ All three are generated from the `metadata.json` files, which are the source of 
 ### pymatgen
 - [RCE - CVE-2024-23346](./pymatgen/RCE%20-%20CVE-2024-23346)
 
+### request-baskets
+- [SSRF - CVE-2023-27163](./request-baskets/SSRF%20-%20CVE-2023-27163)
+
 ### Roundcube Webmail
 - [RCE - CVE-2025-49113](./Roundcube%20Webmail/RCE%20-%20CVE-2025-49113)
 
