@@ -310,6 +310,9 @@ All three are generated from the `metadata.json` files, which are the source of 
 - [AuthBypass - CVE-2019-14287](./sudo/AuthBypass%20-%20CVE-2019-14287)
 - [LPE - CVE-2025-32462](./sudo/LPE%20-%20CVE-2025-32462)
 
+### systemd
+- [LPE - CVE-2023-26604](./systemd/LPE%20-%20CVE-2023-26604)
+
 ### TensorFlow
 - [RCE - CVE-2024-3660](./TensorFlow/RCE%20-%20CVE-2024-3660)
 
