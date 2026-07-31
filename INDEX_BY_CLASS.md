@@ -6,7 +6,7 @@ Every entry is a verified, reproduced exploit for a PUBLIC advisory, filed under
 come from any public namespace (CVE, GHSA, distro, vendor); when an advisory carries several ids it is
 filed under its CVE and the rest are listed as aliases.
 
-114 entries across 17 classes.
+115 entries across 17 classes.
 
 
 ## AuthBypass (9)
@@ -83,7 +83,7 @@ filed under its CVE and the rest are listed as aliases.
 
 - [Microsoft AD CS - CVE-2024-49019](./Microsoft%20AD%20CS/PrivEsc%20-%20CVE-2024-49019) - fixed in apply the November 2024 Windows Server updates; audit and remediate Schema V1 `EnrolleeSuppliesSubject`
 
-## RCE (55)
+## RCE (56)
 
 - [Adobe ColdFusion - CVE-2009-2265](./Adobe%20ColdFusion/RCE%20-%20CVE-2009-2265) - fixed in Upgrade to a patched ColdFusion release / apply the vendor hotfix; remove or restrict the FCKeditor connector
 - [Apache ActiveMQ - CVE-2023-46604](./Apache%20ActiveMQ/RCE%20-%20CVE-2023-46604) - fixed in 5.15.16
@@ -131,6 +131,7 @@ filed under its CVE and the rest are listed as aliases.
 - [Samba - CVE-2007-2447](./Samba/RCE%20-%20CVE-2007-2447) - fixed in upgrade to Samba 3.0.25rc3 or later (or remove the `username map script` option)
 - [Samba - CVE-2026-4480](./Samba/RCE%20-%20CVE-2026-4480) - fixed in c2633a95a88f5f777fc94a25a07f1faa47420fc5
 - [Searchor - CVE-2023-43364](./Searchor/RCE%20-%20CVE-2023-43364) - fixed in 2.4.2
+- [Spring Cloud Function - CVE-2022-22963](./Spring%20Cloud%20Function/RCE%20-%20CVE-2022-22963) - fixed in 3.2.3
 - [TensorFlow - CVE-2024-3660](./TensorFlow/RCE%20-%20CVE-2024-3660) - fixed in 2.13.1rc0
 - [UnrealIRCd - CVE-2010-2075](./UnrealIRCd/RCE%20-%20CVE-2010-2075) - fixed in Reinstall from a clean upstream build and verify the tarball checksum/signature; upgrade to a maintained release
 - [vm2 - CVE-2023-30547](./vm2/RCE%20-%20CVE-2023-30547) - fixed in 3.9.17

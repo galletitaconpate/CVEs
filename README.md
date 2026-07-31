@@ -317,6 +317,9 @@ All three are generated from the `metadata.json` files, which are the source of 
 ### snapd
 - [LPE - CVE-2026-3888](./snapd/LPE%20-%20CVE-2026-3888)
 
+### Spring Cloud Function
+- [RCE - CVE-2022-22963](./Spring%20Cloud%20Function/RCE%20-%20CVE-2022-22963)
+
 ### SQLPad
 - [SSTI - CVE-2022-0944](./SQLPad/SSTI%20-%20CVE-2022-0944)
 
