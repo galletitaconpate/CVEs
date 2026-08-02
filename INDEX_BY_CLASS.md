@@ -6,7 +6,7 @@ Every entry is a verified, reproduced exploit for a PUBLIC advisory, filed under
 come from any public namespace (CVE, GHSA, distro, vendor); when an advisory carries several ids it is
 filed under its CVE and the rest are listed as aliases.
 
-117 entries across 17 classes.
+118 entries across 17 classes.
 
 
 ## AuthBypass (9)
@@ -35,10 +35,11 @@ filed under its CVE and the rest are listed as aliases.
 - [HTTP/2 - ADV190005](./ADV190005) - fixed in vendor specific
 - [HTTP/2 - CVE-2023-44487](./CVE-2023-44487) - fixed in vendor specific
 
-## FileRead (2)
+## FileRead (3)
 
 - [Adminer - CVE-2020-35572](./Adminer/FileRead%20-%20CVE-2020-35572) - fixed in 4.7.9
 - [ImageMagick - CVE-2022-44268](./ImageMagick/FileRead%20-%20CVE-2022-44268) - fixed in 7.1.0-52
+- [Jenkins - CVE-2024-23897](./Jenkins/FileRead%20-%20CVE-2024-23897) - fixed in 2.426.3
 
 ## InfoDisclosure (2)
 

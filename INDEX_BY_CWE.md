@@ -6,7 +6,7 @@ Every entry is a verified, reproduced exploit for a PUBLIC advisory, filed under
 come from any public namespace (CVE, GHSA, distro, vendor); when an advisory carries several ids it is
 filed under its CVE and the rest are listed as aliases.
 
-88 of 117 entries carry a CWE mapping across 48 distinct weaknesses.
+89 of 118 entries carry a CWE mapping across 48 distinct weaknesses.
 
 
 ## CWE-20 - Improper Input Validation
@@ -26,6 +26,7 @@ filed under its CVE and the rest are listed as aliases.
 - [Druva inSync - LPE - CVE-2020-5752 (HIGH)](./Druva%20inSync/LPE%20-%20CVE-2020-5752)
 - [Ghost CMS - PathTraversal - CVE-2023-40028 (MEDIUM)](./Ghost%20CMS/PathTraversal%20-%20CVE-2023-40028)
 - [Grafana - PathTraversal - CVE-2021-43798 (HIGH)](./Grafana/PathTraversal%20-%20CVE-2021-43798)
+- [Jenkins - FileRead - CVE-2024-23897 (CRITICAL)](./Jenkins/FileRead%20-%20CVE-2024-23897)
 - [Magento - RCE - CVE-2015-1398 (MEDIUM)](./Magento/RCE%20-%20CVE-2015-1398)
 - [Tiny File Manager - PathTraversal - CVE-2021-45010](./Tiny%20File%20Manager/PathTraversal%20-%20CVE-2021-45010)
 

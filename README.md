@@ -174,6 +174,7 @@ All three are generated from the `metadata.json` files, which are the source of 
 
 ### Jenkins
 - [CWE200 - CVE-2025-59474](./Jenkins/CWE200%20-%20CVE-2025-59474)
+- [FileRead - CVE-2024-23897](./Jenkins/FileRead%20-%20CVE-2024-23897)
 
 ### JetBrains TeamCity
 - [AuthBypass - CVE-2023-42793](./JetBrains%20TeamCity/AuthBypass%20-%20CVE-2023-42793)
