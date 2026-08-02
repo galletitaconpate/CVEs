@@ -6,7 +6,7 @@ Every entry is a verified, reproduced exploit for a PUBLIC advisory, filed under
 come from any public namespace (CVE, GHSA, distro, vendor); when an advisory carries several ids it is
 filed under its CVE and the rest are listed as aliases.
 
-89 of 118 entries carry a CWE mapping across 48 distinct weaknesses.
+90 of 119 entries carry a CWE mapping across 49 distinct weaknesses.
 
 
 ## CWE-20 - Improper Input Validation
@@ -183,6 +183,10 @@ filed under its CVE and the rest are listed as aliases.
 ## CWE-347 - Improper Verification of Cryptographic Signature
 
 - [pac4j - AuthBypass - CVE-2026-29000 (CRITICAL)](./pac4j/AuthBypass%20-%20CVE-2026-29000)
+
+## CWE-367
+
+- [PackageKit - LPE - CVE-2026-41651](./PackageKit/LPE%20-%20CVE-2026-41651)
 
 ## CWE-400 - Uncontrolled Resource Consumption
 

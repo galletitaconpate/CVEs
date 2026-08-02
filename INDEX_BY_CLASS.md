@@ -6,7 +6,7 @@ Every entry is a verified, reproduced exploit for a PUBLIC advisory, filed under
 come from any public namespace (CVE, GHSA, distro, vendor); when an advisory carries several ids it is
 filed under its CVE and the rest are listed as aliases.
 
-118 entries across 17 classes.
+119 entries across 17 classes.
 
 
 ## AuthBypass (9)
@@ -51,7 +51,7 @@ filed under its CVE and the rest are listed as aliases.
 - [esm.sh - CVE-2025-59341](./esm.sh/LFI%20-%20CVE-2025-59341) - fixed in upgrade to v137 (or a build after the path-sanitization patch)
 - [PrivateBin - CVE-2025-64714](./PrivateBin/LFI%20-%20CVE-2025-64714) - fixed in 2.0.3
 
-## LPE (16)
+## LPE (17)
 
 - [apport - CVE-2023-1326](./apport/LPE%20-%20CVE-2023-1326) - fixed in e5f78cc89f1f5888b6a56b785dddcb0364c48ecb
 - [below - CVE-2025-27591](./below/LPE%20-%20CVE-2025-27591) - fixed in 0.9.0
@@ -64,6 +64,7 @@ filed under its CVE and the rest are listed as aliases.
 - [Microsoft Windows Secondary Logon - CVE-2016-0099](./Microsoft%20Windows%20Secondary%20Logon/LPE%20-%20CVE-2016-0099)
 - [Moby - CVE-2021-41091](./Moby/LPE%20-%20CVE-2021-41091) - fixed in 20.10.9
 - [needrestart - CVE-2024-48990](./needrestart/LPE%20-%20CVE-2024-48990) - fixed in 539233750b59ed3b39cb763f5ad43243c2eaf562
+- [PackageKit - CVE-2026-41651](./PackageKit/LPE%20-%20CVE-2026-41651) - fixed in d9cae13b326238488bf06fb5bf458cfeeaf71869
 - [PDF24 Creator - CVE-2023-49147](./PDF24%20Creator/LPE%20-%20CVE-2023-49147)
 - [polkit - CVE-2021-4034](./polkit/LPE%20-%20CVE-2021-4034) - fixed in 827b0ddac5b1ef00a47fca4526fcf057bee5f1db
 - [snapd - CVE-2026-3888](./snapd/LPE%20-%20CVE-2026-3888) - fixed in 4f16c3f0664575cf915b5727684d249f6e00bcc6

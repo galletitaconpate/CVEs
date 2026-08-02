@@ -275,6 +275,9 @@ All three are generated from the `metadata.json` files, which are the source of 
 ### pac4j
 - [AuthBypass - CVE-2026-29000](./pac4j/AuthBypass%20-%20CVE-2026-29000)
 
+### PackageKit
+- [LPE - CVE-2026-41651](./PackageKit/LPE%20-%20CVE-2026-41651)
+
 ### Paessler PRTG Network Monitor
 - [RCE - CVE-2018-9276](./Paessler%20PRTG%20Network%20Monitor/RCE%20-%20CVE-2018-9276)
 
