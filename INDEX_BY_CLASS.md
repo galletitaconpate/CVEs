@@ -6,7 +6,7 @@ Every entry is a verified, reproduced exploit for a PUBLIC advisory, filed under
 come from any public namespace (CVE, GHSA, distro, vendor); when an advisory carries several ids it is
 filed under its CVE and the rest are listed as aliases.
 
-116 entries across 17 classes.
+117 entries across 17 classes.
 
 
 ## AuthBypass (9)
@@ -153,8 +153,9 @@ filed under its CVE and the rest are listed as aliases.
 - [GlobalProtect - CVE-2025-0133](./GlobalProtect/RXSS%20-%20CVE-2025-0133) - fixed in GlobalProtect 9.1.23, 10.2.13, 11.1.5 or later
 - [Keycloak - CVE-2021-20323](./Keycloak/RXSS%20-%20CVE-2021-20323) - fixed in 17.0.0
 
-## SQLi (6)
+## SQLi (7)
 
+- [Anuko Time Tracker - CVE-2022-24707](./Anuko%20Time%20Tracker/SQLi%20-%20CVE-2022-24707) - fixed in 1.20.1 (commit 0e2d6563e2d969209c502a1eae4ddd8e87b73299)
 - [CMS Made Simple - CVE-2019-9053](./CMS%20Made%20Simple/SQLi%20-%20CVE-2019-9053)
 - [FreePBX - CVE-2025-57819](./FreePBX/SQLi%20-%20CVE-2025-57819) - fixed in 753016ba2b07f2eb99e94938383371350ab30928
 - [GLPI - CVE-2025-24799](./GLPI/SQLi%20-%20CVE-2025-24799) - fixed in 9389461d8a207bdcdf4f50f9db9fc8acdf6c7bbf

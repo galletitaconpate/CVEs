@@ -6,7 +6,7 @@ Every entry is a verified, reproduced exploit for a PUBLIC advisory, filed under
 come from any public namespace (CVE, GHSA, distro, vendor); when an advisory carries several ids it is
 filed under its CVE and the rest are listed as aliases.
 
-87 of 116 entries carry a CWE mapping across 48 distinct weaknesses.
+88 of 117 entries carry a CWE mapping across 48 distinct weaknesses.
 
 
 ## CWE-20 - Improper Input Validation
@@ -73,6 +73,7 @@ filed under its CVE and the rest are listed as aliases.
 
 ## CWE-89 - SQL Injection
 
+- [Anuko Time Tracker - SQLi - CVE-2022-24707](./Anuko%20Time%20Tracker/SQLi%20-%20CVE-2022-24707)
 - [CMS Made Simple - SQLi - CVE-2019-9053 (HIGH)](./CMS%20Made%20Simple/SQLi%20-%20CVE-2019-9053)
 - [FreePBX - SQLi - CVE-2025-57819 (CRITICAL)](./FreePBX/SQLi%20-%20CVE-2025-57819)
 - [GLPI - SQLi - CVE-2025-24799 (HIGH)](./GLPI/SQLi%20-%20CVE-2025-24799)

@@ -56,6 +56,9 @@ All three are generated from the `metadata.json` files, which are the source of 
 ### aiohttp
 - [PathTraversal - CVE-2024-23334](./aiohttp/PathTraversal%20-%20CVE-2024-23334)
 
+### Anuko Time Tracker
+- [SQLi - CVE-2022-24707](./Anuko%20Time%20Tracker/SQLi%20-%20CVE-2022-24707)
+
 ### Apache ActiveMQ
 - [RCE - CVE-2023-46604](./Apache%20ActiveMQ/RCE%20-%20CVE-2023-46604)
 
