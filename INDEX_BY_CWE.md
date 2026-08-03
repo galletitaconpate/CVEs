@@ -28,7 +28,7 @@ filed under its CVE and the rest are listed as aliases.
 - [Grafana - PathTraversal - CVE-2021-43798 (HIGH)](./Grafana/PathTraversal%20-%20CVE-2021-43798)
 - [Jenkins - FileRead - CVE-2024-23897 (CRITICAL)](./Jenkins/FileRead%20-%20CVE-2024-23897)
 - [Magento - RCE - CVE-2015-1398 (MEDIUM)](./Magento/RCE%20-%20CVE-2015-1398)
-- [Tiny File Manager - PathTraversal - CVE-2021-45010](./Tiny%20File%20Manager/PathTraversal%20-%20CVE-2021-45010)
+- [Tiny File Manager - PathTraversal - CVE-2021-45010 (HIGH)](./Tiny%20File%20Manager/PathTraversal%20-%20CVE-2021-45010)
 
 ## CWE-23 - Relative Path Traversal
 
@@ -45,7 +45,7 @@ filed under its CVE and the rest are listed as aliases.
 
 ## CWE-74 - Improper Neutralization of Special Elements in Output ('Injection')
 
-- [Cacti - RCE - CVE-2022-46169](./Cacti/RCE%20-%20CVE-2022-46169)
+- [Cacti - RCE - CVE-2022-46169 (CRITICAL)](./Cacti/RCE%20-%20CVE-2022-46169)
 - [vm2 - RCE - CVE-2023-30547 (CRITICAL)](./vm2/RCE%20-%20CVE-2023-30547)
 
 ## CWE-77 - Command Injection
@@ -74,7 +74,7 @@ filed under its CVE and the rest are listed as aliases.
 
 ## CWE-89 - SQL Injection
 
-- [Anuko Time Tracker - SQLi - CVE-2022-24707](./Anuko%20Time%20Tracker/SQLi%20-%20CVE-2022-24707)
+- [Anuko Time Tracker - SQLi - CVE-2022-24707 (HIGH)](./Anuko%20Time%20Tracker/SQLi%20-%20CVE-2022-24707)
 - [CMS Made Simple - SQLi - CVE-2019-9053 (HIGH)](./CMS%20Made%20Simple/SQLi%20-%20CVE-2019-9053)
 - [FreePBX - SQLi - CVE-2025-57819 (CRITICAL)](./FreePBX/SQLi%20-%20CVE-2025-57819)
 - [GLPI - SQLi - CVE-2025-24799 (HIGH)](./GLPI/SQLi%20-%20CVE-2025-24799)
@@ -131,7 +131,7 @@ filed under its CVE and the rest are listed as aliases.
 
 ## CWE-200 - Exposure of Sensitive Information to an Unauthorized Actor
 
-- [ImageMagick - FileRead - CVE-2022-44268](./ImageMagick/FileRead%20-%20CVE-2022-44268)
+- [ImageMagick - FileRead - CVE-2022-44268 (MEDIUM)](./ImageMagick/FileRead%20-%20CVE-2022-44268)
 - [Microsoft Windows File Explorer - AuthBypass - CVE-2025-24071 (HIGH)](./Microsoft%20Windows%20File%20Explorer/AuthBypass%20-%20CVE-2025-24071)
 
 ## CWE-268 - Privilege Chaining
@@ -141,7 +141,7 @@ filed under its CVE and the rest are listed as aliases.
 ## CWE-269 - Improper Privilege Management
 
 - [apport - LPE - CVE-2023-1326 (HIGH)](./apport/LPE%20-%20CVE-2023-1326)
-- [systemd - LPE - CVE-2023-26604](./systemd/LPE%20-%20CVE-2023-26604)
+- [systemd - LPE - CVE-2023-26604 (HIGH)](./systemd/LPE%20-%20CVE-2023-26604)
 
 ## CWE-281
 
@@ -178,7 +178,7 @@ filed under its CVE and the rest are listed as aliases.
 
 ## CWE-316
 
-- [KeePass - InfoDisclosure - CVE-2023-32784](./KeePass/InfoDisclosure%20-%20CVE-2023-32784)
+- [KeePass - InfoDisclosure - CVE-2023-32784 (HIGH)](./KeePass/InfoDisclosure%20-%20CVE-2023-32784)
 
 ## CWE-347 - Improper Verification of Cryptographic Signature
 
@@ -186,7 +186,7 @@ filed under its CVE and the rest are listed as aliases.
 
 ## CWE-367
 
-- [PackageKit - LPE - CVE-2026-41651](./PackageKit/LPE%20-%20CVE-2026-41651)
+- [PackageKit - LPE - CVE-2026-41651 (HIGH)](./PackageKit/LPE%20-%20CVE-2026-41651)
 
 ## CWE-400 - Uncontrolled Resource Consumption
 
