@@ -11,6 +11,7 @@
 
   "certifications": {
     "earned": [
+      { "id": "CWEE", "name": "HTB Certified Web Exploitation Expert", "org": "Hack The Box", "date": "2026-08", "credential": "HTBCERT-0682E04537", "badge": "https://profile.hackthebox.com/profile/019d0289-7980-737b-b2dd-48f7a5b1e2dc/certificate/HTBCERT-0682E04537" },
       { "id": "CPTS", "name": "HTB Certified Penetration Testing Specialist", "org": "Hack The Box", "date": "2026-07", "credential": "HTBCERT-5A5556FF17", "badge": "https://academy.hackthebox.com/achievement/badge/34f5ae2f-8b59-11f1-82d1-bea50ffe6cb4" },
       { "id": "CJCA", "name": "HTB Certified Junior Cybersecurity Associate", "org": "Hack The Box", "date": "2026-07", "credential": "HTBCERT-A5C907386B", "badge": "https://academy.hackthebox.com/achievement/badge/e5289ccc-8698-11f1-82d1-bea50ffe6cb4" },
       { "id": "COAE", "name": "HTB Certified Offensive AI Expert", "org": "Hack The Box", "date": "2026-06", "credential": "HTBCERT-1A9A2C9CBB", "badge": "https://academy.hackthebox.com/achievement/badge/5f61e864-73aa-11f1-82d1-bea50ffe6cb4" },
@@ -35,9 +36,8 @@
     ],
 
     "inProgress": [
-      { "id": "CWPE", "name": "HTB Wi-Fi Penetration Tester", "org": "Hack The Box", "progress": 34.1 },
-      { "id": "CWEE", "name": "HTB Certified Web Exploitation Expert", "org": "Hack The Box", "progress": 19.2 },
-      { "id": "CAPE", "name": "HTB Certified Active Directory Pentesting Expert", "org": "Hack The Box", "progress": 14.2 }
+      { "id": "CAPE", "name": "HTB Certified Active Directory Pentesting Expert", "org": "Hack The Box", "progress": 100 },
+      { "id": "CWPE", "name": "HTB Wi-Fi Penetration Tester", "org": "Hack The Box", "progress": 34.1 }
     ]
   },
 
@@ -79,6 +79,29 @@
   },
 
   "advisories": [
+    {
+      "id": "GHSA-66mc-2whw-f3w9",
+      "product": "DefectDojo",
+      "url": "https://github.com/DefectDojo/django-DefectDojo/security/advisories/GHSA-66mc-2whw-f3w9",
+      "title": "Missing Authorization in Global Search Allows Cross-Product Disclosure of Product Metadata",
+      "severity": "MEDIUM",
+      "severityLabel": "Moderate",
+      "score": 4.3,
+      "fixed": "3.1.302",
+      "soleCredit": false,
+      "reporters": 2
+    },
+    {
+      "id": "GHSA-f2mc-9pw6-w3mf",
+      "product": "DefectDojo",
+      "url": "https://github.com/DefectDojo/django-DefectDojo/security/advisories/GHSA-f2mc-9pw6-w3mf",
+      "title": "Product Type Membership Could Be Changed Through the API Without the Member-Management Permission",
+      "severity": "MEDIUM",
+      "severityLabel": "Moderate",
+      "score": 5.4,
+      "fixed": "3.1.301",
+      "soleCredit": true
+    },
     {
       "id": "GHSA-j4rw-3r36-79pm",
       "product": "DefectDojo",
