@@ -262,7 +262,12 @@ def render_certifications(profile):
         lines.append(f"| 🧪 {lab['name']} | HTB Pro Lab | ✅ {pretty_date(lab.get('date')) or 'Completed'} |")
 
     for cert in certs.get("inProgress", []):
-        lines.append(f"| 🟦 {cert['id']} | {cert['name']} | 🔄 {cert['progress']}% |")
+        # An exam sat and awaiting the result is neither earned nor a mid-study
+        # percentage, so it gets its own status instead of a 🔄 progress bar.
+        if cert.get("status") == "awaiting":
+            lines.append(f"| 🟧 {cert['id']} | {cert['name']} | ⏳ Awaiting results |")
+        else:
+            lines.append(f"| 🟦 {cert['id']} | {cert['name']} | 🔄 {cert['progress']}% |")
 
     lines.append("")
     lines.append(CERT_MARKERS[1])
