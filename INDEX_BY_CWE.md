@@ -6,7 +6,7 @@ Every entry is a verified, reproduced exploit for a PUBLIC advisory, filed under
 come from any public namespace (CVE, GHSA, distro, vendor); when an advisory carries several ids it is
 filed under its CVE and the rest are listed as aliases.
 
-90 of 119 entries carry a CWE mapping across 49 distinct weaknesses.
+91 of 120 entries carry a CWE mapping across 49 distinct weaknesses.
 
 
 ## CWE-20 - Improper Input Validation
@@ -252,6 +252,7 @@ filed under its CVE and the rest are listed as aliases.
 ## CWE-918 - Server-Side Request Forgery
 
 - [Keycloak - SSRF - CVE-2020-10770 (MEDIUM)](./Keycloak/SSRF%20-%20CVE-2020-10770)
+- [Next.js - SSRF - CVE-2024-34351 (HIGH)](./Next.js/SSRF%20-%20CVE-2024-34351)
 - [request-baskets - SSRF - CVE-2023-27163 (MEDIUM)](./request-baskets/SSRF%20-%20CVE-2023-27163)
 
 ## CWE-1327 - Binding to an Unrestricted IP Address

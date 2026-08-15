@@ -253,6 +253,7 @@ All three are generated from the `metadata.json` files, which are the source of 
 
 ### Next.js
 - [RCE - CVE-2025-55182](./Next.js/RCE%20-%20CVE-2025-55182)
+- [SSRF - CVE-2024-34351](./Next.js/SSRF%20-%20CVE-2024-34351)
 
 ### Nginx-UI
 - [AuthBypass - CVE-2026-27944](./Nginx-UI/AuthBypass%20-%20CVE-2026-27944)

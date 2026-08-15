@@ -6,7 +6,7 @@ Every entry is a verified, reproduced exploit for a PUBLIC advisory, filed under
 come from any public namespace (CVE, GHSA, distro, vendor); when an advisory carries several ids it is
 filed under its CVE and the rest are listed as aliases.
 
-119 entries across 17 classes.
+120 entries across 17 classes.
 
 
 ## AuthBypass (9)
@@ -165,10 +165,11 @@ filed under its CVE and the rest are listed as aliases.
 - [WordPress - CVE-2026-63030](./WordPress/SQLi%20-%20CVE-2026-63030) - fixed in WordPress 6.8.6, 6.9.5, 7.0.2, 7.1-beta2
 - [ZoneMinder - CVE-2024-51482](./ZoneMinder/SQLi%20-%20CVE-2024-51482) - fixed in 9e7d31841ed9678a7dd06869037686fc9925e59f
 
-## SSRF (3)
+## SSRF (4)
 
 - [Docker Desktop - CVE-2025-9074](./Docker%20Desktop/SSRF%20-%20CVE-2025-9074) - fixed in Docker Desktop 4.44.3+
 - [Keycloak - CVE-2020-10770](./Keycloak/SSRF%20-%20CVE-2020-10770) - fixed in 13.0.0
+- [Next.js - CVE-2024-34351](./Next.js/SSRF%20-%20CVE-2024-34351) - fixed in 14.1.1
 - [request-baskets - CVE-2023-27163](./request-baskets/SSRF%20-%20CVE-2023-27163) - fixed in Mitigation only (upstream treats forwarding as intended): enable authentication / restricted mode, network-isolate, do not expose to untrusted clients
 
 ## SSTI (1)
