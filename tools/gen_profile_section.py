@@ -266,6 +266,10 @@ def render_certifications(profile):
         # percentage, so it gets its own status instead of a 🔄 progress bar.
         if cert.get("status") == "awaiting":
             lines.append(f"| 🟧 {cert['id']} | {cert['name']} | ⏳ Awaiting results |")
+        elif cert.get("status") == "ready":
+            # Coursework finished but the exam not sat yet. Showing this as
+            # "100%" alongside mid-study percentages read as already certified.
+            lines.append(f"| 🟩 {cert['id']} | {cert['name']} | ✅ Ready to sit |")
         else:
             lines.append(f"| 🟦 {cert['id']} | {cert['name']} | 🔄 {cert['progress']}% |")
 

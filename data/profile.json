@@ -36,8 +36,8 @@
     ],
 
     "inProgress": [
-      { "id": "CAPE", "name": "HTB Certified Active Directory Pentesting Expert", "org": "Hack The Box", "progress": 100 },
-      { "id": "CWPE", "name": "HTB Wi-Fi Penetration Tester", "org": "Hack The Box", "status": "awaiting" }
+      { "id": "CAPE", "name": "HTB Certified Active Directory Pentesting Expert", "org": "Hack The Box", "progress": 100, "status": "ready" },
+      { "id": "CWPE", "name": "HTB Certified Wi-Fi Pentesting Expert", "org": "Hack The Box", "status": "awaiting" }
     ]
   },
 
