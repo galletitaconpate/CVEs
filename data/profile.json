@@ -80,6 +80,20 @@
 
   "advisories": [
     {
+      "id": "GHSA-g8wf-fmj5-38vr",
+      "product": "DefectDojo",
+      "url": "https://github.com/DefectDojo/django-DefectDojo/security/advisories/GHSA-g8wf-fmj5-38vr",
+      "title": "Private notes were readable and modifiable by other members of the same product",
+      "severity": "MEDIUM",
+      "severityLabel": "Moderate",
+      "score": 5.4,
+      "cwe": ["CWE-200", "CWE-862"],
+      "affected": "= 3.2.100",
+      "fixed": "3.2.200",
+      "soleCredit": false,
+      "reporters": 2
+    },
+    {
       "id": "GHSA-66mc-2whw-f3w9",
       "product": "DefectDojo",
       "url": "https://github.com/DefectDojo/django-DefectDojo/security/advisories/GHSA-66mc-2whw-f3w9",
