@@ -8,6 +8,10 @@ name: sync generated artifacts
 # calls three external APIs and mutates the metadata, so splitting it would
 # double that load and let two concurrent runs push conflicting states, leaving
 # the profile and the site reflecting different enrichment.
+#
+# The indices here are regenerated on every push, but the pushes to the profile
+# and the website only happen on the scheduled run or a manual dispatch. See
+# the "Decide whether to sync downstream" step for why.
 on:
   push:
     branches: [main]
@@ -83,9 +87,20 @@ jobs:
       # Everything below writes to other repositories, which the default
       # GITHUB_TOKEN cannot do — it is scoped to this one. Without SYNC_TOKEN the
       # steps above still run and these are skipped rather than failing.
-      - name: Check for sync token
+      - name: Decide whether to sync downstream
         id: gate
         run: |
+          # Netlify bills the website a flat 15 credits per production deploy no
+          # matter how short the build is, and the Free plan grants 300 a month.
+          # Pushing site-data.js on every archive change spent all 300 in three
+          # weeks and left the site frozen on a three-week-old deploy, so the
+          # downstream pushes are batched into the weekly run: ~5 deploys a
+          # month instead of ~21. Run the workflow manually to publish at once.
+          if [ "${{ github.event_name }}" = "push" ]; then
+            echo "ready=false" >> "$GITHUB_OUTPUT"
+            echo "::notice::Downstream sync is batched into the Monday run to stay inside the Netlify credit budget. Run this workflow manually (Actions -> sync generated artifacts -> Run workflow) to publish to the profile and the site now."
+            exit 0
+          fi
           if [ -n "${{ secrets.SYNC_TOKEN }}" ]; then
             echo "ready=true" >> "$GITHUB_OUTPUT"
           else
