@@ -80,6 +80,32 @@
 
   "advisories": [
     {
+      "id": "GHSA-wf7g-4v94-85qm",
+      "product": "DefectDojo",
+      "url": "https://github.com/DefectDojo/django-DefectDojo/security/advisories/GHSA-wf7g-4v94-85qm",
+      "title": "Cross-product disclosure of finding data through the DefectDojo Pro compliance module",
+      "severity": "MEDIUM",
+      "severityLabel": "Moderate",
+      "score": 6.5,
+      "cwe": ["CWE-639"],
+      "affected": ">= 3.1.300, <= 3.2.200",
+      "fixed": "3.2.201",
+      "soleCredit": true
+    },
+    {
+      "id": "GHSA-67w9-42qx-7mcg",
+      "product": "DefectDojo",
+      "url": "https://github.com/DefectDojo/django-DefectDojo/security/advisories/GHSA-67w9-42qx-7mcg",
+      "title": "Cross-product disclosure of finding data through the scan import preview API in DefectDojo Pro",
+      "severity": "MEDIUM",
+      "severityLabel": "Moderate",
+      "score": 6.5,
+      "cwe": ["CWE-639", "CWE-862"],
+      "affected": ">= 2.58.0, <= 3.2.200",
+      "fixed": "3.2.201",
+      "soleCredit": true
+    },
+    {
       "id": "GHSA-g8wf-fmj5-38vr",
       "product": "DefectDojo",
       "url": "https://github.com/DefectDojo/django-DefectDojo/security/advisories/GHSA-g8wf-fmj5-38vr",
