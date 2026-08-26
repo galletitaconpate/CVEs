@@ -247,12 +247,19 @@ def render_bounty(profile):
     return "\n".join(lines)
 
 
+def credential_cell(entry):
+    """The credential ID, so a reader can verify the entry against the issuer.
+    Not every certification has one; those get an em dash rather than a gap."""
+    return f"`{entry['credential']}`" if entry.get("credential") else "—"
+
+
 def render_certifications(profile):
     """Certification table, newest first: what is pending, then everything
     earned — degrees, exams and Pro Labs interleaved by date rather than
     grouped by kind, so the table reads as one timeline."""
     certs = profile.get("certifications", {})
-    lines = [CERT_MARKERS[0], "## certifications", "", "| Badge | Name | Status |", "|-------|------|--------|"]
+    lines = [CERT_MARKERS[0], "## certifications", "",
+             "| Badge | Name | Credential | Status |", "|-------|------|------------|--------|"]
 
     # Pending work sits on top: an exam about to be sat is the most recent
     # thing that happened, and it has no date to sort it by.
@@ -260,23 +267,27 @@ def render_certifications(profile):
         # An exam sat and awaiting the result is neither earned nor a mid-study
         # percentage, so it gets its own status instead of a 🔄 progress bar.
         if cert.get("status") == "awaiting":
-            lines.append(f"| 🟧 {cert['id']} | {cert['name']} | ⏳ Awaiting results |")
+            lines.append(f"| 🟧 {cert['id']} | {cert['name']} | — | ⏳ Awaiting results |")
         elif cert.get("status") == "ready":
             # Coursework finished but the exam not sat yet. Showing this as
             # "100%" alongside mid-study percentages read as already certified.
-            lines.append(f"| 🟩 {cert['id']} | {cert['name']} | ✅ Ready to sit |")
+            lines.append(f"| 🟩 {cert['id']} | {cert['name']} | — | ✅ Ready to sit |")
         else:
-            lines.append(f"| 🟦 {cert['id']} | {cert['name']} | 🔄 {cert['progress']}% |")
+            lines.append(f"| 🟦 {cert['id']} | {cert['name']} | — | 🔄 {cert['progress']}% |")
 
     earned = []
     for cert in certs.get("earned", []):
         name = cert["name"]
         if cert.get("badge"):
             name = f"[{name}]({cert['badge']})"
-        earned.append((cert.get("date") or "", f"| 🟩 {cert['id']} | {name} | ✅ {pretty_date(cert.get('date')) or 'Earned'} |"))
+        earned.append((cert.get("date") or "",
+                       f"| 🟩 {cert['id']} | {name} | {credential_cell(cert)} | "
+                       f"✅ {pretty_date(cert.get('date')) or 'Earned'} |"))
 
     for lab in certs.get("proLabs", []):
-        earned.append((lab.get("date") or "", f"| 🧪 {lab['name']} | HTB Pro Lab | ✅ {pretty_date(lab.get('date')) or 'Completed'} |"))
+        earned.append((lab.get("date") or "",
+                       f"| 🧪 {lab['name']} | HTB Pro Lab | {credential_cell(lab)} | "
+                       f"✅ {pretty_date(lab.get('date')) or 'Completed'} |"))
 
     # Newest first. An undated entry sorts last rather than to the top, which is
     # where an empty string would land it on a plain descending sort.
