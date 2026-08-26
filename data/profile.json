@@ -17,10 +17,10 @@
       { "id": "COAE", "name": "HTB Certified Offensive AI Expert", "org": "Hack The Box", "date": "2026-06", "credential": "HTBCERT-1A9A2C9CBB", "badge": "https://academy.hackthebox.com/achievement/badge/5f61e864-73aa-11f1-82d1-bea50ffe6cb4" },
       { "id": "CWES", "name": "HTB Certified Web Exploitation Specialist", "org": "Hack The Box", "date": "2025-12", "credential": "HTBCERT-414397D53C", "badge": "https://academy.hackthebox.com/achievement/badge/be48e831-d1cd-11f0-9254-bea50ffe6cb4" },
       { "id": "CEHv12", "name": "Certified Ethical Hacker (CEH v12)", "org": "EC-Council", "date": "2023-12" },
+      { "id": "CYBERCRIME", "name": "Expert in Cybercrime and Cybersecurity Investigation", "org": "Universidad Siglo 21", "date": "2022-07" },
       { "id": "eWPT", "name": "Web Application Penetration Tester", "org": "INE Security", "date": "2022-02", "credential": "2017007" },
       { "id": "CS50-AI", "name": "CS50 Introduction to AI with Python", "org": "HarvardX", "date": "2022-02" },
       { "id": "PY-RESEARCH", "name": "Using Python for Research", "org": "HarvardX", "date": "2022-02" },
-      { "id": "CYBERCRIME", "name": "Expert in Cybercrime and Cybersecurity Investigation", "org": "Universidad Siglo 21", "date": "2022-07" },
       { "id": "eJPT", "name": "Junior Penetration Tester", "org": "INE Security", "date": "2021-05", "credential": "79622927" },
       { "id": "BURP-ADV", "name": "Advanced Burp Suite", "org": "ArtsSEC", "date": "2019-11" },
       { "id": "PY-ADV", "name": "Advanced Python", "org": "Intertron", "date": "2019-02" },
@@ -29,6 +29,7 @@
     ],
 
     "proLabs": [
+      { "id": "Puppet", "name": "Puppet", "org": "Hack The Box", "date": "2026-08", "credential": "HTBCERT-356919F511" },
       { "id": "Dante", "name": "Dante", "org": "Hack The Box", "date": "2026-06", "credential": "HTBCERT-EE52EA6552" },
       { "id": "POO", "name": "P.O.O.", "org": "Hack The Box", "date": "2026-06", "credential": "HTBCERT-38E9502AED" },
       { "id": "Mythical", "name": "Mythical", "org": "Hack The Box", "date": "2026-06", "credential": "HTBCERT-6EAF0E59C6" },

@@ -248,19 +248,14 @@ def render_bounty(profile):
 
 
 def render_certifications(profile):
-    """Certification table: earned, Pro Labs, and in-progress with percentages."""
+    """Certification table, newest first: what is pending, then everything
+    earned — degrees, exams and Pro Labs interleaved by date rather than
+    grouped by kind, so the table reads as one timeline."""
     certs = profile.get("certifications", {})
     lines = [CERT_MARKERS[0], "## certifications", "", "| Badge | Name | Status |", "|-------|------|--------|"]
 
-    for cert in certs.get("earned", []):
-        name = cert["name"]
-        if cert.get("badge"):
-            name = f"[{name}]({cert['badge']})"
-        lines.append(f"| 🟩 {cert['id']} | {name} | ✅ {pretty_date(cert.get('date')) or 'Earned'} |")
-
-    for lab in certs.get("proLabs", []):
-        lines.append(f"| 🧪 {lab['name']} | HTB Pro Lab | ✅ {pretty_date(lab.get('date')) or 'Completed'} |")
-
+    # Pending work sits on top: an exam about to be sat is the most recent
+    # thing that happened, and it has no date to sort it by.
     for cert in certs.get("inProgress", []):
         # An exam sat and awaiting the result is neither earned nor a mid-study
         # percentage, so it gets its own status instead of a 🔄 progress bar.
@@ -272,6 +267,21 @@ def render_certifications(profile):
             lines.append(f"| 🟩 {cert['id']} | {cert['name']} | ✅ Ready to sit |")
         else:
             lines.append(f"| 🟦 {cert['id']} | {cert['name']} | 🔄 {cert['progress']}% |")
+
+    earned = []
+    for cert in certs.get("earned", []):
+        name = cert["name"]
+        if cert.get("badge"):
+            name = f"[{name}]({cert['badge']})"
+        earned.append((cert.get("date") or "", f"| 🟩 {cert['id']} | {name} | ✅ {pretty_date(cert.get('date')) or 'Earned'} |"))
+
+    for lab in certs.get("proLabs", []):
+        earned.append((lab.get("date") or "", f"| 🧪 {lab['name']} | HTB Pro Lab | ✅ {pretty_date(lab.get('date')) or 'Completed'} |"))
+
+    # Newest first. An undated entry sorts last rather than to the top, which is
+    # where an empty string would land it on a plain descending sort.
+    earned.sort(key=lambda row: (row[0] != "", row[0]), reverse=True)
+    lines += [row for _, row in earned]
 
     lines.append("")
     lines.append(CERT_MARKERS[1])
