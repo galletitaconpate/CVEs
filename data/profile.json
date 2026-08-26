@@ -46,23 +46,23 @@
       "handle": "galletitaconpate",
       "url": "https://hackerone.com/galletitaconpate",
       "since": "2019-10",
-      "reputation": 421,
+      "reputation": 453,
       "signal": 7.0,
-      "signalPercentile": 95,
+      "signalPercentile": 90,
       "impact": 21.0,
       "impactPercentile": 90,
-      "credits": 28,
+      "credits": 31,
       "thanks": 12,
       "_programsComment": "Public programs only. Programs that HackerOne marks Confidential are deliberately left out: naming them can breach the program's terms.",
       "programs": [
         { "name": "Itaú Unibanco", "reputation": 84, "rank": 1 },
-        { "name": "Whoop", "reputation": 57, "rank": 4 },
+        { "name": "Whoop", "reputation": 57, "rank": 5 },
         { "name": "Toyota", "reputation": 56, "rank": 37 },
         { "name": "MercadoLibre", "reputation": 48 },
+        { "name": "DefectDojo", "reputation": 48, "rank": 4 },
         { "name": "McKesson", "reputation": 35, "rank": 4 },
-        { "name": "DefectDojo", "reputation": 23, "rank": 3 },
         { "name": "Fluentic", "reputation": 17, "rank": 6 },
-        { "name": "Principal Financial Group", "reputation": 14, "rank": 9 },
+        { "name": "Principal Financial Group", "reputation": 14, "rank": 10 },
         { "name": "Priceline", "reputation": 7 },
         { "name": "Valve", "reputation": 2 }
       ]
@@ -71,10 +71,10 @@
       "handle": "r4zk3r",
       "url": null,
       "rank": 7,
-      "points": 638,
-      "vulns": 57,
-      "accuracy": 78,
-      "avgSeverity": 6.59
+      "points": 734,
+      "vulns": 65,
+      "accuracy": 72,
+      "avgSeverity": 6.71
     }
   },
 
