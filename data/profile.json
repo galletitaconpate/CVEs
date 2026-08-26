@@ -33,7 +33,7 @@
       { "id": "Dante", "name": "Dante", "org": "Hack The Box", "date": "2026-06", "credential": "HTBCERT-EE52EA6552" },
       { "id": "POO", "name": "P.O.O.", "org": "Hack The Box", "date": "2026-06", "credential": "HTBCERT-38E9502AED" },
       { "id": "Mythical", "name": "Mythical", "org": "Hack The Box", "date": "2026-06", "credential": "HTBCERT-6EAF0E59C6" },
-      { "id": "Unintended", "name": "Unintended", "org": "Hack The Box", "credential": "HTBCERT-B11C77CFCA" }
+      { "id": "Unintended", "name": "Unintended", "org": "Hack The Box", "date": "2026-06", "credential": "HTBCERT-B11C77CFCA" }
     ],
 
     "inProgress": [
