@@ -81,6 +81,19 @@
 
   "advisories": [
     {
+      "id": "GHSA-vxvf-jjrg-26w8",
+      "product": "DefectDojo",
+      "url": "https://github.com/DefectDojo/django-DefectDojo/security/advisories/GHSA-vxvf-jjrg-26w8",
+      "title": "Missing Authorization on Open Questionnaire Write Operations in DefectDojo Pro",
+      "severity": "MEDIUM",
+      "severityLabel": "Moderate",
+      "score": 4.3,
+      "cwe": ["CWE-862"],
+      "affected": ">= 2.52.0, <= 3.2.201",
+      "fixed": "3.2.300",
+      "soleCredit": true
+    },
+    {
       "id": "GHSA-wf7g-4v94-85qm",
       "product": "DefectDojo",
       "url": "https://github.com/DefectDojo/django-DefectDojo/security/advisories/GHSA-wf7g-4v94-85qm",
